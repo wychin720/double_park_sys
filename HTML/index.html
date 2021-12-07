@@ -13,23 +13,38 @@
       </div>
       <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
         <div>
-          <button style="width: -webkit-fill-available;">Check Vehicle</button>
+          <button style="width: -webkit-fill-available;" onclick="toCheck()">Check Vehicle</button>
         </div>
         <div style="width: fit-content;margin: auto;">
           <p>or</p>
         </div>
         <div>
-          <button style="width: -webkit-fill-available;">Register Vehicle</button>
+          <button style="width: -webkit-fill-available;" onclick="toReg()">Register Vehicle</button>
         </div>
         <div style="width: fit-content;margin: auto;">
           <p>or</p>
         </div>
         <div>
-          <button style="width: -webkit-fill-available;">Checkout Vehicle</button>
+          <button style="width: -webkit-fill-available;" onclick="toCheckOut()">Checkout Vehicle</button>
         </div>
       </div>
     </div>
   </div>
+  <script type="text/javascript">
+    function toCheck() {
+      console.log("hi");
+      window.location.href = "checkVehicle.html";
+    }
+    function toReg() {
+      window.location.href = "regVehicle.html";
+    }
+    function toCheckOut() {
+      window.location.href = "checkOutVehicle.html";
+    }
+
+
+
+  </script>
 </body>
 
 </html>
