@@ -6,29 +6,48 @@
   <body> 
     <div style="padding-top: 100px;width: fit-content;margin: auto;">
         <div style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
-            <div style="width: 500px; margin: auto;"><h1>Below is the information on xxxxxx</h1></div>
+            <div style="width: 500px; margin: auto;"><h1>Below is the information on&nbsp;<span id="title"></span></h1></div>
             <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Vehicle Plate: xxxxxx </p>
+                    <p style="width: -webkit-fill-available;" >Vehicle Plate: <span id="plate"></span></p>
                 </div>
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Contact Number: xxxxxx </p>
+                    <p style="width: -webkit-fill-available;" >Contact Number: <span id="contactNum">aaa</span></p>
                 </div>
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Time Parked : xx:xx AM/PM</p>
+                    <p style="width: -webkit-fill-available;">Time Parked : <span id="timeParked">aaa</span></p>
                 </div>
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Location: xxxxxx </p>
+                    <p style="width: -webkit-fill-available;" >Location: <span id="locWent">aaa</span></p>
                 </div>
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available; overflow-wrap: break-word;">Owner's Name: test insert some very very very long name to make sure it doesnt affect the padding yubbayubbayubbayubbayubbayubbayubbayubbayubbayubbayubbayubba</p>
+                    <p style="width: -webkit-fill-available; overflow-wrap: break-word;">Owner's Name: <span id="name">aaa</span></p>
                 </div>
                 <div >
-                    <button style="width: 40%;">Copy Contact Number</button>
+                    <button style="width: 40%;" onclick="copyToClipboard()">Copy Contact Number</button>
                     <button style="width: 40%";>Message Owner</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // here will be run before the page is rendered
+        document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
+        document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
+        // get values from firebase based on vehicle plate and update
+        function copyToClipboard() {
+            var copyText = document.getElementById("contactNum");
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = copyText.textContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+             /* Select the text field */
+            tempTextArea.setSelectionRange(0, 99999); /* For mobile devices */
+            /* Copy the text*/
+            document.execCommand("copy");
+            tempTextArea.remove();
+        }
+    </script>
   </body>
 </html>
