@@ -35,6 +35,8 @@
         // here will be run before the page is rendered
         document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
         document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
+        // clear the sessionStorage
+        sessionStorage.clear();
         // get values from firebase based on vehicle plate and update
         function copyToClipboard() {
             var copyText = document.getElementById("contactNum");
