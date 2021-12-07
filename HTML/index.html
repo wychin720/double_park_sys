@@ -1,50 +1,55 @@
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <title>Double Parking Notification System</title>
+    </head>
+    <body>
+        <!-- logo pic -->
+        <img src="../imgs/dumpling (1).png" alt="logo picture" class="logo-picture">
 
-<head>
-  <title>Double Parking Notification System</title>
-</head>
+        <!-- System name-->
+        <div class="sys-name">DOUBLE PARKING NOTIFICATION SYSTEM</div>
 
-<body>
-  <div style="padding-top: 100px;width: fit-content;margin: auto;">
-    <div
-      style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
-      <div>
-        <h1>Please Select an option</h1>
-      </div>
-      <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
-        <div>
-          <button style="width: -webkit-fill-available;" onclick="toCheck()">Check Vehicle</button>
-        </div>
-        <div style="width: fit-content;margin: auto;">
-          <p>or</p>
-        </div>
-        <div>
-          <button style="width: -webkit-fill-available;" onclick="toReg()">Register Vehicle</button>
-        </div>
-        <div style="width: fit-content;margin: auto;">
-          <p>or</p>
-        </div>
-        <div>
-          <button style="width: -webkit-fill-available;" onclick="toCheckOut()">Checkout Vehicle</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script type="text/javascript">
-    function toCheck() {
-      console.log("hi");
-      window.location.href = "checkVehicle.html";
-    }
-    function toReg() {
-      window.location.href = "regVehicle.html";
-    }
-    function toCheckOut() {
-      window.location.href = "checkOutVehicle.html";
-    }
+            <!-- Buttons-->
+            <button type="button" class="buttons" onclick="toCheck()">
+                <span class="button-icon">
+                    <ion-icon name="search"></ion-icon>
+                </span>
+                <span class="button-text">SEARCH VEHICLE</span>
+            </button>
 
+            <button type="button" class="buttons" onclick="toReg()">
+                <span class="button-icon">
+                    <ion-icon name="location"></ion-icon>
+                </span>
+                <span class="button-text">CHECK-IN VEHICLE</span>
+            </button>
 
+            <button type="button" class="buttons" onclick="toCheckOut()">
+                <span class="button-icon">
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                </span>
+                <span class="button-text">CHECK-OUT VEHICLE</span>
+            </button>
 
-  </script>
-</body>
+        <!-- Footer -->
+        <div class="footer">Copyright © 2021 Dumpling Grads • Made with sweat and tears</div>
 
+        <!-- Navigation -->
+        <script type="text/javascript">
+            function toCheck() {
+              console.log("hi");
+              window.location.href = "checkVehicle.html";
+            }
+            function toReg() {
+              window.location.href = "regVehicle.html";
+            }
+            function toCheckOut() {
+              window.location.href = "checkOutVehicle.html";
+            }        
+          </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 </html>
