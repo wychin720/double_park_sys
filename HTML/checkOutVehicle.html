@@ -1,21 +1,37 @@
-<html> 
-  <head>
-    <title>Double Parking Notification System</title> 
-  </head>
- 
-  <body> 
-    <div style="padding-top: 100px;width: fit-content;margin: auto;">
-        <div style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
-            <div ><h1>Enter Your Vehicle Plate</h1></div>
-            <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
-                <div style="padding-bottom:20px">
-                    <input style="width: -webkit-fill-available;" type="text" id="vehicleNo" name="vehicleNo">
-                </div>
-                <div >
-                    <button style="width: -webkit-fill-available;">Check Out</button>
-                </div>
-            </div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <title>Double Parking Notification System</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="header">
+            <ion-icon name="checkmark-circle" style="color:#69df59; font-size:30px;"></ion-icon> 
+            CHECK-OUT VEHICLE
         </div>
-    </div>
-  </body>
+        <br><br>
+
+        <!-- Input -->
+        <div>
+            <input class="input-bar" type="text" id="vehicleNo" name="vehicleNo" placeholder="Enter Vehicle Plate Number">
+        </div>
+
+        <!-- Button -->
+        <div>
+            <button type="button" class="submit_btn">
+                Check-out
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Copyright © 2021 Dumpling Grads • Made with sweat and tears
+        </div>
+        
+        <!-- Function -->
+        
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 </html>
