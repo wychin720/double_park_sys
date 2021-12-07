@@ -1,0 +1,154 @@
+body {
+    background: #221a3f;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+
+/* Landing Page */
+
+
+/* if wan circle */
+/* img {
+    border-radius: 50%;
+} */
+
+
+.logo-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    height: auto;
+    max-width: 80px;
+}
+
+.sys-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+
+.buttons {
+    background-color: #8561e6;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    width: 330px;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+    transition-duration: 1s;
+}
+
+.button-text {
+    margin:auto;
+}
+
+.button-icon {
+    margin: 0 -10% 0 10%;
+    color: #fff;
+    font-size: 25px;
+}
+
+.buttons:hover {
+    /* color: #000; */
+    /* background: #fff; */
+    background: #5327ca;
+}
+
+/* Check-In Vehicle */
+.CI-header {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form { 
+    display: table;      
+}
+
+p { 
+    display: table-row;  
+}
+
+label { 
+    display: table-cell; 
+    width: 230px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input { 
+    display: table-cell; 
+    width: 300px;
+    padding: 5px;
+}
+
+#driver-select {
+    width: 55px;
+    padding: 5px;
+}
+
+#driver_name {
+    margin-left: 5px;
+    width: 240px;
+    padding: 5px
+}
+
+
+/* Search and Check-out Vehicle */
+
+.box {
+    background-color: #7b8edc;
+    padding: 40px 40px 30px 40px;
+    margin: 30px;
+}
+
+.header {
+    margin-top: 25%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.input-bar {
+    width: 60%;
+    display: block;
+    margin: -10px auto auto;
+    padding: 5px;
+}
+
+.submit_btn {
+    background-color: #8561e6;
+    color: white;
+    margin: 15px 0 0 265px;
+    font-size: 17px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 40px;
+    transition-duration: 1s;
+}
+
+.submit_btn:hover {
+    background: #5327ca;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20%;
+    font-size: 10px;
+    font-weight: bold;
+}
