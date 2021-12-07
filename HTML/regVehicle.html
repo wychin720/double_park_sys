@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Double Parking Notification System</title>
 </head>
+
 <body>
     <div style="padding-top: 100px;width: fit-content;margin: auto;">
-        <div style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
+        <div
+            style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
             <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
-                <div style="width: 900px; margin: auto;"><h1>Please Enter Your Details</h1></div>
+                <div style="width: 900px; margin: auto;">
+                    <h1>Please Enter Your Details</h1>
+                </div>
                 <form>
                     <label for="vehicle_plate">Vehicle Plate:</label>
-                    <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Insert Here"><br><br>
+                    <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Insert Here"
+                        required><br><br>
                     <label for="contact_number">Contact Number:</label>
-                    <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here"><br><br>
+                    <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here"
+                        required><br><br>
                     <label for="location_went">Location Went:</label>
-                    <input type="text" id="location_went" name="location_went" placeholder="Insert Here"><br><br>
+                    <input type="text" id="location_went" name="location_went" placeholder="Insert Here"
+                        required><br><br>
                     <label for="driver_name">Driver Name (Optional):</label>
                     <select>
                         <option value="Mr">Mr</option>
@@ -25,12 +33,43 @@
                         <option value="None">N/A</option>
                     </select>
                     <input type="text" id="driver_name" name="driver_name" placeholder="Insert Here"><br><br><br>
-                  </form>
-                <div >
-                    <button type="submit" name="submit">Register Vehicle</button>
+                </form>
+                <div>
+                    <button onclick="submitForm()">Register Vehicle</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function validateForm() {
+            // TODO : add highlight of box ? for the missing mandatory fields
+            var inputs = document.querySelectorAll("input");
+            var flag = false;
+            Array.prototype.slice.call(inputs).forEach(function (input) {
+                if (input.hasAttribute('required') && !input.checkValidity()) {
+                    flag = true;
+                }
+            }, false);
+
+            if (flag == true) {
+                alert("Please fill in missing details.");
+            }
+            return flag;
+        }
+        function submitForm() {
+            // add entry into firebase
+            if (!validateForm()) {
+                var success = true;
+                if (success == true) {
+                    alert("You have successfully registered your vehicle!");
+                }
+                else {
+                    alert("Registration unsuccessful, please try again.");
+                }
+                window.location.href = "index.html";
+            }
+        }
+    </script>
 </body>
+
 </html>
