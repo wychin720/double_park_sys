@@ -46,7 +46,8 @@ body {
 }
 
 .button-text {
-    margin:auto;
+    /* margin:auto; */
+    margin-left: 42px;
 }
 
 .button-icon {
@@ -76,28 +77,32 @@ p {
 }
 
 label { 
-    display: table-cell; 
+    /* display: table-cell;  */
     width: 100px;
     font-weight: bold;
     font-size: 16px;
-    padding-left: 7px;
+    padding-left: 20px;
 }
 
 input { 
-    display: table-cell; 
-    width: 97%;
-    /* padding: 5px; */
+    width: 100%;
+    display: block;
+    margin-left: 20px;
+    padding: 3px;
 }
 
 #driver-select {
-    width: 45px;
-    /* padding: 5px; */
+    display: inline-block;
+    width: 50px;
+    margin-left: 20px;
+    padding: 3px;
 }
 
 #driver_name {
+    display: inline-block;
+    width: 70%;
     margin-left: 5px;
-    width: 72%;
-    /* padding: 5px */
+    padding: 3px
 }
 
 
@@ -106,10 +111,10 @@ input {
 .box {
     background-color: #7b8edc;
     width: 98%;
-    height: 30%;
     padding-top: 8%;
     padding-bottom: 8%;
     margin-left: 5px;
+    overflow:auto;
 }
 
 .header {
@@ -140,6 +145,7 @@ input {
 .submit_btn:hover {
     background: #5327ca;
 }
+
 
 .info {
     color: #181b6b;
