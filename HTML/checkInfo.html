@@ -52,6 +52,13 @@
             </button>
         </div>
 
+        <!-- Button (next level)-->
+        <div style="text-align: center;">
+            <button type="button" class="submit_btn"  onclick="returnToHome()">
+                Return To Home
+            </button>
+        </div>
+
         <!-- Footer -->
         <div class="footer">
             Copyright © 2021 Dumpling Grads • Made with sweat and tears
@@ -77,6 +84,12 @@
                 document.execCommand("copy");
                 tempTextArea.remove();
             }
+
+            // user click button to return back to home
+            function returnToHome(){
+                window.location.href = "index.html"
+            }
+
         </script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     </body>
