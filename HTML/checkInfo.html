@@ -17,27 +17,27 @@
         <div class="box"> 
             <p>
                 <label>Vehicle Plate</label>
-                <span class="info"> AAA3456 </span>
+                <span class="info" id="plate"></span>
             </p><br>
 
             <p>
                 <label>Phone Number</label>
-                <span class="info"> XXX XXX XXXX </span>
+                <span class="info" id="contactNum">aaa</span>
             </p><br>
 
             <p>
                 <label>Time Parked</label>
-                <span class="info"> 2021-12-07 20:27 </span>
+                <span class="info" id="time"> 2021-12-07 20:27 </span>
             </p><br>
 
             <p>
                 <label>Location</label>
-                <span class="info"> Taco Bell </span>
+                <span class="info" id="loc"> Taco Bell </span>
             </p><br>
 
             <p>
                 <label>Owner's Name</label>
-                <span class="info"> N/A </span>
+                <span class="info" id="name"> N/A </span>
             </p>
         </div>
 
@@ -60,7 +60,7 @@
         <!-- Function -->
         <script>
             // here will be run before the page is rendered
-            document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
+            //document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
             document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
             // clear the sessionStorage
             sessionStorage.clear();
