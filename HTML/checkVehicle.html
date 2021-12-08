@@ -17,13 +17,13 @@
 
     <!-- Input -->
     <div>
-        <input class="input-bar" type="text" id="vehicleNo" name="vehicleNo" placeholder="Enter Vehicle Plate Number">
+        <input class="input-bar" type="text" id="vehicleNo" name="vehicleNo" placeholder="Plate Number">
     </div>
 
     <!-- Button -->
     <div>
         <button type="button" class="submit_btn" style="display: block;" onclick="verifyPlate()">
-            Check Vehicle
+            <ion-icon name="chevron-forward-circle-outline"></ion-icon>
         </button>
     </div>
 
@@ -37,8 +37,6 @@
         function checkPlate(toVerify) {
             var plateNum = document.getElementById("vehicleNo").value;
             return toVerify == plateNum;
-            //sessionStorage.setItem("plateNo", plateNum);
-            // window.location.href = "checkInfo.html";
         }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -47,7 +45,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
     <script>
-        function verifyPlate() {
+        async function verifyPlate() {
             const firebaseConfig = {
                 apiKey: "AIzaSyAXk8gPSjviouGc-pfkoXdFzHDcy_fR-dM",
                 authDomain: "adminproject-129f1.firebaseapp.com",
@@ -60,18 +58,32 @@
             const plateNum = document.getElementById("vehicleNo").value;
             const app = firebase.initializeApp(firebaseConfig);
             const db = app.firestore();
-
-            var flag = false; // default is not found
-            const verifyPlate = db.collection("users").get().then((snapshot) => snapshot.forEach((doc) => {
-                const checkingRes = checkPlate(doc.data().plate);
-                if (checkingRes == true) {
-                    console.log("hi");
-                    return true;
+            var flag = false;
+            var data = [];
+            const found = await db.collection("users").get();
+            found.forEach((doc) => {
+                if(checkPlate(doc.data().plate) == true) {
+                    flag = true;
+                    data.push(doc.data());
                 }
-            }));
-            console.log(verifyPlate);
-            
+            });
+            console.log(data);
+            if(flag == true) {
+                sessionStorage.setItem("plateNo", plateNum);
+                sessionStorage.setItem("phone", data[0].phone);
+                sessionStorage.setItem("name", data[0].name);
+                sessionStorage.setItem("loc", data[0].location);
+                sessionStorage.setItem("colour", data[0].colour);
+                console.log(typeof data[0].time);
+                sessionStorage.setItem("time", data[0].time.toDate().toString());
+                sessionStorage.setItem("brand", data[0].brandModel);
+                window.location.href = "checkFound.html";
+            }
+            else{
+                window.location.href = "checkNotFound.html";
+            }
         }
+
     </script>
 </body>
 
