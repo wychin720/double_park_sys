@@ -109,12 +109,13 @@ input {
 
 .box {
     background-color: #7b8edc;
+    width: 520px;
     padding: 40px 40px 30px 40px;
-    margin: 30px;
+    margin: 25px auto auto;
 }
 
 .header {
-    margin-top: 25%;
+    margin-top: 15%;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
@@ -122,7 +123,7 @@ input {
 
 
 .input-bar {
-    width: 60%;
+    width: 45%;
     display: block;
     margin: -10px auto auto;
     padding: 5px;
@@ -131,12 +132,13 @@ input {
 .submit_btn {
     background-color: #8561e6;
     color: white;
-    margin: 15px 0 0 265px;
+    margin: 17px auto 0 auto;
     font-size: 17px;
     padding: 5px 15px;
     border: none;
     border-radius: 40px;
     transition-duration: 1s;
+    display:block;
 }
 
 .submit_btn:hover {
