@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- System name-->
+    <br>
+    <br>
+    <div style="text-align: center;">
+        <!-- TODO : align the text with the logo -->
+        <ion-icon name="person-circle-outline" style="font-size: 50px;"></ion-icon><span>Hi, User</span>
+        <br>
+        <!-- TODO : Change to different colour to differentiate from the below ones -->
+        <button type="button" class="submit_btn">
+            <ion-icon name="search"></ion-icon>
+        </button>
+        <button type="button" class="submit_btn">
+            <ion-icon name="home-outline"></ion-icon>
+        </button>
+    </div>
+
+    <!-- Buttons-->
+    <button type="button" class="buttons" onclick="toReg()">
+        <span class="button-icon">
+            <ion-icon name="options-outline"></ion-icon>
+        </span>
+        <span class="button-text">General</span>
+    </button>
+
+    <button type="button" class="buttons" onclick="toCheck()">
+        <span class="button-icon">
+            <ion-icon name="newspaper-outline"></ion-icon>
+        </span>
+        <span class="button-text">History</span>
+    </button>
+
+    <button type="button" class="buttons" onclick="toCheckOut()">
+        <span class="button-icon">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+        </span>
+        <span class="button-text">Change Password</span>
+    </button>
+
+    <button type="button" class="buttons" onclick="toCheckOut()">
+        <span class="button-icon">
+            <ion-icon name="log-out-outline"></ion-icon>
+        </span>
+        <span class="button-text">Sign Out</span>
+    </button>
+
+    <!-- Footer -->
+    <div class="footer">Copyright © 2021 Dumpling Grads • Made with sweat and tears</div>
+
+    <!-- Navigation -->
+    <script type="text/javascript">
+        function toCheck() {
+            console.log("hi");
+            window.location.href = "checkVehicle.html";
+        }
+        function toReg() {
+            window.location.href = "regVehicle.html";
+        }
+        function toCheckOut() {
+            window.location.href = "checkOutVehicle.html";
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
