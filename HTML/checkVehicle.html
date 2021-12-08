@@ -1,47 +1,78 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../CSS/styles.css">
-        <title>Double Parking Notification System</title>
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="header">
-            <ion-icon name="search" style="font-size:30px;"></ion-icon> 
-            SEARCH VEHICLE
-        </div>
-        <br><br>
 
-        <!-- Input -->
-        <div>
-            <input class="input-bar" type="text" id="vehicleNo" name="vehicleNo" placeholder="Enter Vehicle Plate Number">
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
 
-        <!-- Button -->
-        <div>
-            <button type="button" class="submit_btn" style="display: block;" onclick="checkPlate()">
-                Check Vehicle
-            </button>
-        </div>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <ion-icon name="search" style="font-size:30px;"></ion-icon>
+        SEARCH VEHICLE
+    </div>
+    <br><br>
 
-        <!-- Footer -->
-        <div class="footer">
-            Copyright © 2021 Dumpling Grads • Made with sweat and tears
-        </div>
-        
-        <!-- Function -->
-        <script>
-            function checkPlate() {
-              // get the input plate
-              var plateNum = document.getElementById("vehicleNo").value;
-              console.log(plateNum);
-              // TODO : verify with firebase
-              // if plate exists then navigate to next screen
-              sessionStorage.setItem("plateNo",plateNum);
-              window.location.href = "checkInfo.html";
-            }
-        </script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    </body>
+    <!-- Input -->
+    <div>
+        <input class="input-bar" type="text" id="vehicleNo" name="vehicleNo" placeholder="Enter Vehicle Plate Number">
+    </div>
+
+    <!-- Button -->
+    <div>
+        <button type="button" class="submit_btn" style="display: block;" onclick="verifyPlate()">
+            Check Vehicle
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+
+    <!-- Function -->
+    <script>
+        function checkPlate(toVerify) {
+            var plateNum = document.getElementById("vehicleNo").value;
+            return toVerify == plateNum;
+            //sessionStorage.setItem("plateNo", plateNum);
+            // window.location.href = "checkInfo.html";
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script>
+        function verifyPlate() {
+            const firebaseConfig = {
+                apiKey: "AIzaSyAXk8gPSjviouGc-pfkoXdFzHDcy_fR-dM",
+                authDomain: "adminproject-129f1.firebaseapp.com",
+                databaseURL: "https://adminproject-129f1.firebaseio.com",
+                projectId: "adminproject-129f1",
+                storageBucket: "adminproject-129f1.appspot.com",
+                messagingSenderId: "52547207023731",
+                appId: "1:944478240098:android:794f67ffbebd2508bac03b",
+            };
+            const plateNum = document.getElementById("vehicleNo").value;
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = app.firestore();
+
+            var flag = false; // default is not found
+            const verifyPlate = db.collection("users").get().then((snapshot) => snapshot.forEach((doc) => {
+                const checkingRes = checkPlate(doc.data().plate);
+                if (checkingRes == true) {
+                    console.log("hi");
+                    return true;
+                }
+            }));
+            console.log(verifyPlate);
+            
+        }
+    </script>
+</body>
+
 </html>
