@@ -9,17 +9,22 @@
 
 <body>
     <!-- System name-->
-    <br>
-    <br>
+
     <div style="text-align: center;">
         <!-- TODO : align the text with the logo -->
-        <ion-icon name="person-circle-outline" style="font-size: 50px;"></ion-icon><span>Hi, User</span>
+        <div class="invisible-box">
+            <span class="profile-icon">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </span>
+            <span class="profile-text">Hi, User</span>
+        </div>
         <br>
+
         <!-- TODO : Change to different colour to differentiate from the below ones -->
-        <button type="button" class="submit_btn">
+        <button type="button" class="submit_btn" style="background-color: #8d28c7;">
             <ion-icon name="search"></ion-icon>
         </button>
-        <button type="button" class="submit_btn">
+        <button type="button" class="submit_btn" style="background-color: #5327ca;">
             <ion-icon name="home-outline"></ion-icon>
         </button>
     </div>
@@ -43,7 +48,7 @@
         <span class="button-icon">
             <ion-icon name="lock-closed-outline"></ion-icon>
         </span>
-        <span class="button-text">Change Password</span>
+        <span class="button-text" id="long-btn-text">Change Password</span>
     </button>
 
     <button type="button" class="buttons" onclick="toSignOut()">
