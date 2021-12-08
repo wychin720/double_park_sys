@@ -18,7 +18,7 @@
             <!-- Input -->
             <form>
                 <div style="text-align: right;">
-                    <button type="button" class="submit_btn" style="margin-top: 0px;">
+                    <button type="button" class="submit_btn" style="margin-top: 0px;" onclick="searchVehicle()">
                         <ion-icon name="search"></ion-icon>
                     </button>
                 </div>
@@ -45,8 +45,8 @@
 
         <!-- Button -->
         <div>
-            <button type="button" class="submit_btn" style="display: block;" onclick="checkForm()">
-                Register Vehicle
+            <button type="button" class="submit_btn" style="display: block;" onclick="checkIn()">
+                Check-In
             </button>
         </div>
 
@@ -57,44 +57,14 @@
         
         <!-- Function -->
         <script>
-            function validateForm() {
-                // TODO : add highlight of box ? for the missing mandatory fields
-                var inputs = document.querySelectorAll("input");
-                var flag = false;
-                Array.prototype.slice.call(inputs).forEach(function (input) {
-                    if (input.hasAttribute('required') && !input.checkValidity()) {
-                        flag = true;
-                    }
-                }, false);
-    
-                if (flag == true) {
-                    alert("Please fill in missing details.");
-                }
-                return flag;
-            }
-
-            function checkForm() {
-              // get the input information
-
-
-
+            function checkIn() {
               // Go to confirmation page
               window.location.href = "confirmRegVehicle.html";
             }
 
-            // No onger in use! Replaced by confirmForm()
-            function submitForm() {
-                if (!validateForm()) {
-                    var success = true;
-                    if (success == true) {
-                        // TODO : add entry into firebase
-                        alert("You have successfully registered your vehicle!");
-                    }
-                    else {
-                        alert("Registration unsuccessful, please try again.");
-                    }
-                    window.location.href = "index.html";
-                }
+            function searchVehicle() {
+              // Go to confirmation page
+              window.location.href = "checkVehicle.html";
             }
         </script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
