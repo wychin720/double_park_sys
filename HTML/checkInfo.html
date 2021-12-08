@@ -1,55 +1,83 @@
-<html> 
-  <head>
-    <title>Double Parking Notification System</title> 
-  </head>
- 
-  <body> 
-    <div style="padding-top: 100px;width: fit-content;margin: auto;">
-        <div style="border: solid;border-color: black;border-width: 2;padding-left: 15px;padding-right: 15px;padding-bottom: 15px;">
-            <div style="width: 500px; margin: auto;"><h1>Below is the information on&nbsp;<span id="title"></span></h1></div>
-            <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
-                <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;" >Vehicle Plate: <span id="plate"></span></p>
-                </div>
-                <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;" >Contact Number: <span id="contactNum">aaa</span></p>
-                </div>
-                <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Time Parked : <span id="timeParked">aaa</span></p>
-                </div>
-                <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;" >Location: <span id="locWent">aaa</span></p>
-                </div>
-                <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available; overflow-wrap: break-word;">Owner's Name: <span id="name">aaa</span></p>
-                </div>
-                <div >
-                    <button style="width: 40%;" onclick="copyToClipboard()">Copy Contact Number</button>
-                    <button style="width: 40%";>Message Owner</button>
-                </div>
-            </div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/styles.css">
+        <title>Double Parking Notification System</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="CI-header">
+            <ion-icon name="information-circle-outline" style="font-size: 64px"></ion-icon>
+            <ion-icon name="car-sport" style="font-size: 64px"></ion-icon> 
         </div>
-    </div>
+        <br>
 
-    <script>
-        // here will be run before the page is rendered
-        document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
-        document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
-        // clear the sessionStorage
-        sessionStorage.clear();
-        // get values from firebase based on vehicle plate and update
-        function copyToClipboard() {
-            var copyText = document.getElementById("contactNum");
-            var tempTextArea = document.createElement("textarea");
-            tempTextArea.value = copyText.textContent;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-             /* Select the text field */
-            tempTextArea.setSelectionRange(0, 99999); /* For mobile devices */
-            /* Copy the text*/
-            document.execCommand("copy");
-            tempTextArea.remove();
-        }
-    </script>
-  </body>
+        <!-- Display Information -->
+        <div class="box"> 
+            <p>
+                <label>Vehicle Plate</label>
+                <span class="info"> AAA3456 </span>
+            </p><br>
+
+            <p>
+                <label>Phone Number</label>
+                <span class="info"> XXX XXX XXXX </span>
+            </p><br>
+
+            <p>
+                <label>Time Parked</label>
+                <span class="info"> 2021-12-07 20:27 </span>
+            </p><br>
+
+            <p>
+                <label>Location</label>
+                <span class="info"> Taco Bell </span>
+            </p><br>
+
+            <p>
+                <label>Owner's Name</label>
+                <span class="info"> N/A </span>
+            </p>
+        </div>
+
+        <!-- Button -->
+        <div style="text-align: center;">
+            <button type="button" class="submit_btn" onclick="copyToClipboard()">
+                Copy Contact Number
+            </button>
+
+            <button type="button" class="submit_btn">
+                Message Owner
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Copyright © 2021 Dumpling Grads • Made with sweat and tears
+        </div>
+        
+        <!-- Function -->
+        <script>
+            // here will be run before the page is rendered
+            document.getElementById("title").innerText = sessionStorage.getItem("plateNo");
+            document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
+            // clear the sessionStorage
+            sessionStorage.clear();
+            // get values from firebase based on vehicle plate and update
+            function copyToClipboard() {
+                var copyText = document.getElementById("contactNum");
+                var tempTextArea = document.createElement("textarea");
+                tempTextArea.value = copyText.textContent;
+                document.body.appendChild(tempTextArea);
+                tempTextArea.select();
+                 /* Select the text field */
+                tempTextArea.setSelectionRange(0, 99999); /* For mobile devices */
+                /* Copy the text*/
+                document.execCommand("copy");
+                tempTextArea.remove();
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 </html>
