@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="CI-header" style="font-size: 25px;">
+        <ion-icon name="lock-closed-outline" style="font-size: 45px;"></ion-icon>
+        </ion-icon>
+    </div>
+    <div style="font-size: 25px; text-align: center;"> 
+        Reset Password
+    </div>
+    <br>
+
+    <!-- Display Information -->
+    <div class="box">
+        <div style="padding-left: 25px; padding-right: 25px;font-size: 20px; text-align: center;">
+            <p>Do you confirm for password reset ?</p>
+        </div>
+        <!-- TODO : change colour -->
+        <div style="text-align: center;">
+            <button type="button" class="submit_btn" onclick="">
+                <ion-icon name="checkmark-outline"></ion-icon>
+            </button>
+    
+            <button type="button" class="submit_btn" onclick="returnToProfile()">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div style="text-align: center;">
+        <button type="button" class="submit_btn" onclick="toSearch()">
+            <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <button type="button" class="submit_btn" onclick="returnToHome()">
+            <ion-icon name="home-outline"></ion-icon>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+    <script>
+        // user click button to return back to home
+        function returnToHome() {
+            window.location.href = "index.html";
+        }
+
+        function toSearch() {
+            window.location.href = "checkVehicle.html";
+        }
+
+        function returnToProfile() {
+            window.location.href = "profile.html";
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
