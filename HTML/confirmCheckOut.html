@@ -9,10 +9,10 @@
             <div style="width: 500px; margin: auto;"><h1>Please Confirm Your Details Before Checking Out Your Vehicle</h1></div>
             <div style="padding-left: 33%;padding-top: 5px;padding-right: 33%;">
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Ticket Number: xxxxxx </p>
+                    <p id="ticket_number" style="width: -webkit-fill-available;">Ticket Number: xxxxxx </p>
                 </div>
                 <div style="padding-bottom:10px">
-                    <p style="width: -webkit-fill-available;">Vehicle Plate: xxxxxx </p>
+                    <p id="vehicle_plate" style="width: -webkit-fill-available;">Vehicle Plate: xxxxxx </p>
                 </div>
                 <div style="padding-bottom:10px">
                     <p style="width: -webkit-fill-available;">Contact Number: xxxxxx </p>
@@ -24,10 +24,23 @@
                     <p style="width: -webkit-fill-available; overflow-wrap: break-word;">Owner's Name: test insert some very very very long name to make sure it doesnt affect the padding yubbayubbayubbayubbayubbayubbayubbayubbayubbayubbayubbayubba</p>
                 </div>
                 <div >
-                    <button style="width: -webkit-fill-available;">Check Out</button>
+                    <button style="width: -webkit-fill-available;" onclick="confirmCheckOut()">Check Out</button>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        function setDetails() {
+            console.log(Date());
+            document.getElementById("vehicle_plate").innerHTML = "Vehicle Plate: "+ sessionStorage.getItem("check_vehicle_no");
+            //document.getElementById("checkOut_time").innerHTML = "Check out time: "+ Date();
+        }
+        setDetails();
+
+        function confirmCheckOut(){
+            alert("Check out successful!");
+        }
+
+    </script>
   </body>
 </html>
