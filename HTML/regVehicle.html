@@ -50,7 +50,7 @@
 
         <!-- Button -->
         <div>
-            <button type="button" class="submit_btn" style="display: block;" onclick="submitForm()">
+            <button type="button" class="submit_btn" style="display: block;" onclick="checkForm()">
                 Register Vehicle
             </button>
         </div>
@@ -77,6 +77,17 @@
                 }
                 return flag;
             }
+
+            function checkForm() {
+              // get the input information
+
+
+
+              // Go to confirmation page
+              window.location.href = "confirmRegVehicle.html";
+            }
+
+            // No onger in use! Replaced by confirmForm()
             function submitForm() {
                 if (!validateForm()) {
                     var success = true;
