@@ -105,12 +105,11 @@ input {
 
 .box {
     background-color: #7b8edc;
-    width: 100%;
+    width: 98%;
     height: 30%;
     padding-top: 8%;
     padding-bottom: 8%;
-    /* padding: 40px 40px 30px 40px;
-    margin: 10px auto auto; */
+    margin-left: 5px;
 }
 
 .header {
