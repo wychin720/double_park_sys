@@ -1,5 +1,5 @@
 # Double Parking Notification App
-Greetings! We are Daniel, Wen Yuan, Sabrina and Jia Sheng and welcome to our Double Parking Notification System! This prototype solution stems from an ongoing issue of double parking incidents in busy areas in Malaysia. Feel free to check our our web application here [Double Parking Notification App](https://wychin229.github.io/double_park_sys/)
+Greetings! We are Daniel, Wen Yuan, Sabrina and Jia Sheng and welcome to our Double Parking Notification System! This prototype solution stems from an ongoing issue of double parking incidents in busy areas in Malaysia. Feel free to check our our web application here [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) (usage of the web app will be explain in section below "How To Use")
 
 If you’re interested, do view our submission videos for this Hackathon!
 
@@ -11,6 +11,9 @@ Round 2 Video - MVP: (insert YouTube link here)
 This web application prototype is created using HTML, CSS, JavaScript and several other JavaScript and CSS libraries. We have partially integrated Firebase as a backend into our system. When we get to Round 3, we further complete the integration of this database system into our web application.
 
 For this Round 2, most user details are hardcoded in. The MVP is currently in a state of navigability where you can freely navigate the web application but don’t have much _____?
+
+## How To Use
+Just click the link and use lah
 
 ## Further Implementation for Round 3
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
