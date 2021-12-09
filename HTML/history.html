@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div style="text-align: center;">
+        <div class="page-header">
+            <span class="header-icon">
+                <ion-icon name="newspaper-outline" style="font-size: 45px;"></ion-icon>
+            </span>
+            <span class="header-text">History</span>
+    </div>
+
+    <!-- Display Information -->
+    <div class="box">
+        <div style="padding-left: 25px; font-size: 25px;">
+            <p>2019</p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>25 Dec 2019 (Tues) : KFC</p>
+        </div>
+        </br>
+        <div style="padding-left: 25px; font-size: 25px;">
+            <p>2020</p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>29 Jan 2020 (Thurs) : Starbucks</p>
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div style="text-align: center;">
+        <button type="button" class="submit_btn" onclick="toSearch()">
+            <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <button type="button" class="submit_btn" onclick="returnToHome()">
+            <ion-icon name="home-outline"></ion-icon>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+    <script>
+        // user click button to return back to home
+        function returnToHome() {
+            window.location.href = "index.html"
+        }
+
+        function toSearch() {
+            window.location.href = "checkVehicle.html"
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>

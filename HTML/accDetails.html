@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div style="text-align: center;">
+        <div class="page-header">
+            <span class="header-icon">
+                <ion-icon name="options-outline"></ion-icon>
+            </span>
+            <span class="header-text">Account</span>
+    </div>
+
+    <!-- Display Information -->
+    <div class="box">
+        <p>
+            <label>Name</label><br>
+            <span class="info">Mr Brown</span>
+        </p><br>
+        <p>
+            <label>Contact Number
+                <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
+            </label><br>
+            <span class="info">012-345 6789</span>
+        </p><br>
+        <p>
+            <label>Email
+                <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
+            </label><br>
+            <span class="info">luvbrown@gmail.com</span>
+        </p><br>
+        <p>
+            <label>Vehicle Plates
+                <ion-icon name="add-outline" style="font-size: 18px;"></ion-icon>
+            </label><br>
+            <span class="info">ABC1234</span>
+        </p>
+        
+
+        <!-- <div style="padding-left: 25px; font-size: 20px;">
+            <p>Name</ion-icon>
+            </p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>Mr Brown</p>
+        </div>
+        </br>
+        <div style="padding-left: 25px; font-size: 20px;">
+            <p>Contact Number <ion-icon name="create-outline"></ion-icon>
+            </p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>012-345 6789</p>
+        </div>
+        </br>
+        <div style="padding-left: 25px; font-size: 20px;">
+            <p>Email <ion-icon name="create-outline"></ion-icon>
+            </p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>luvbrown@gmail.com</p>
+        </div>
+        </br>
+        <div style="padding-left: 25px; font-size: 20px;">
+            <p>Vehicle Plates <ion-icon name="add-outline"></ion-icon>
+            </p>
+        </div>
+        <div style="padding-left: 25px; font-size: 15px;">
+            <p>ABC1234</p>
+        </div> -->
+    </div>
+
+    <!-- Button -->
+    <div style="text-align: center;">
+        <button type="button" class="submit_btn" onclick="toSearch()">
+            <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <button type="button" class="submit_btn" onclick="returnToHome()">
+            <ion-icon name="home-outline"></ion-icon>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+    <script>
+        // user click button to return back to home
+        function returnToHome() {
+            window.location.href = "index.html"
+        }
+
+        function toSearch() {
+            window.location.href = "checkVehicle.html"
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
+</html>
