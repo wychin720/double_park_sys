@@ -142,8 +142,9 @@ input {
     background-color: #8561e6;
     color: white;
     margin: 25px auto 0 auto;
-    font-size: 17px;
-    padding: 5px 15px;
+    font-size: 20px;
+    /* padding: 5px 15px; */
+    padding: 5px 20px;
     border: none;
     border-radius: 40px;
     transition-duration: 1s;
