@@ -15,20 +15,22 @@ For this Round 2, most user details are hardcoded in. The MVP is currently in a 
 ## How To Use
 First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link and you will be greeted with the following page:
 
+![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
+
 If you want to "Search a Vehicle", you will see the following to enter a vehicle plate:
+
+![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
+
+"Signing In" simply asks you to enter your email and password, to which you will then be brought to this page:
 
 ![image](https://user-images.githubusercontent.com/69201759/145360463-db0bff43-fa48-4e2c-9c7f-91992c04277d.png)
 
-
-"Signing In" simply asks you to enter your email and password, to which you will then be brought to this page:
-![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
-
 If you would like to "Sign Up":
-![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
 
 ![image](https://user-images.githubusercontent.com/69201759/145360672-db6fa633-6089-49ad-aab3-94d930453d8b.png)
 
 Lastly, each user that signs up will have a profile as follows:
+
 ![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
 
 
