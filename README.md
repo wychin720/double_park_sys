@@ -1,5 +1,4 @@
-# Hackathon Monash 2021 - Team 8 (Open Category)
-This repo contains our prototype based on our pitch in round 1.
-
+# Double Parking Notification App
+Our web application is integrated to be mobile-user-friendly. The main goal of our initiative is to _____ . 
 ## About the prototype
 It is a web application ... 
