@@ -19,6 +19,9 @@ As mentioned previously, we would fully integrate Firebase as a backend for the 
 
 ## Authors
 Daniel Goh U-Sheng (https://github.com/daniel-gus)
+
 Chin Wen Yuan (https://github.com/wychin229)
+
 Sabrina Leong Tong Tao (https://github.com/Binana19)
+
 Teh Jia Sheng (https://github.com/thejiasheng)
