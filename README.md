@@ -17,7 +17,7 @@ First click this [Double Parking Notification App](https://wychin229.github.io/d
 
 ![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
 
-If you want to "Search a Vehicle", you will see the following to enter a vehicle plate:
+If you want to "Search a Vehicle", you will see the following to enter a vehicle plate (IMPORTANT NOTE: You can only enter the vehicle plate "VBR4100" as this is the only hard coded value that works - for the purpose of this Round 2):
 
 ![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
 
@@ -32,6 +32,8 @@ If you would like to "Sign Up":
 Lastly, each user that signs up will have a profile as follows:
 
 ![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
+
+That concludes the quick summary, do refer to the Round 2 video here (INSERT YOUTUBE LINK HERE) where we demo further the flow between each page!
 
 
 ## Further Implementation for Round 3
