@@ -4,6 +4,7 @@ Greetings! We are Daniel, Wen Yuan, Sabrina and Jia Sheng and welcome to our Dou
 https://wychin229.github.io/double_park_sys/
 
 If you’re interested, do view our submission videos for this Hackathon!
+
 Round 1 Video - Idea Pitch: https://youtu.be/RfE3DayPM4U
 
 Round 2 Video - MVP: (insert YouTube link here)
