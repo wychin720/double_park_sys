@@ -6,12 +6,9 @@
         <title>Double Parking Notification System</title>
     </head>
     <body>
-        <div style="text-align: center;">
+        <div style="text-align: center; margin-top: 80px;">
             <!-- TODO : centre the text -->
-            <div class="invisible-box">
-                <span class="profile-text">Hi, User</span>
-            </div>
-            <br>
+            <a class="profile-text">Hi, User</a><br>
     
             <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
                 <ion-icon name="search"></ion-icon>
@@ -20,13 +17,16 @@
                 <ion-icon name="person-outline"></ion-icon>
             </button>
         </div>
+        
         <!-- TODO : Move the whole section up -->
-        <!-- Header -->
-        <div class="CI-header">
-            <ion-icon name="location" style="color:#d00b0b; font-size:25px;"></ion-icon> 
-            CHECK-IN
+        <div style="text-align: center; margin-top: -30px;">
+            <div class="page-header">
+                <span class="CI-header-icon">
+                    <ion-icon name="location"></ion-icon>
+                </span>
+                <span class="header-text">CHECK-IN</span>
+            </div>
         </div>
-        <br>
  
         <div class="box">
             <!-- Input -->
@@ -35,12 +35,12 @@
                 <label for="location_went">Location(s):</label>
                 <input type="text" id="location_went" name="location_went" placeholder="Insert Here"
                     required>
-                </p><br>
+                </p>
                 
                 <p>
-                <label for="time_est" style="padding-right: 30px;">Estimated Time Taken:</label> <br>
+                <label for="time_est" style="padding-right: 30px;">Estimated Time Taken:</label>
                 <!-- TODO : fix the select box alignment -->
-                <select id="time-select">
+                <select id="time-select" style="width: 100px;">
                     <option value="five_min">5mins</option>
                     <option value="ten_min">10mins</option>
                     <option value="fifteen_min">15mins</option>
