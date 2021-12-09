@@ -32,5 +32,5 @@ As mentioned previously, we would fully integrate Firebase as a backend for the 
 
 
 **Teh Jia Sheng**
-- GitHub    : https://github.com/thejiasheng
-- LinkedIn  : https://www.linkedin.com/in/jia-sheng-teh-2888971b5/
+GitHub    : https://github.com/thejiasheng
+LinkedIn  : https://www.linkedin.com/in/jia-sheng-teh-2888971b5/
