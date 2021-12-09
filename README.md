@@ -28,6 +28,8 @@ First click this [Double Parking Notification App](https://wychin229.github.io/d
 ## Further Implementation for Round 3
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
 
+Stay tune for more.
+
 ## Authors
 **Daniel Goh U-Sheng**     
 - GitHub    : https://github.com/daniel-gus
