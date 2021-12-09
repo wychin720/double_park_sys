@@ -20,64 +20,35 @@
     <!-- Display Information -->
     <div class="box">
         <p>
-            <label>Name</label><br>
+            <label>Name</label>
             <span class="info">Mr Brown</span>
-        </p><br>
+        </p>
         <p>
             <label>Contact Number
                 <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-            </label><br>
+            </label>
             <span class="info">012-345 6789</span>
-        </p><br>
+        </p>
         <p>
             <label>Email
                 <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-            </label><br>
+            </label>
             <span class="info">luvbrown@gmail.com</span>
-        </p><br>
+        </p>
         <p>
             <label>Vehicle Plates
                 <ion-icon name="add-outline" style="font-size: 18px;"></ion-icon>
-            </label><br>
+            </label>
             <span class="info">ABC1234</span>
         </p>
-        
-
-        <!-- <div style="padding-left: 25px; font-size: 20px;">
-            <p>Name</ion-icon>
-            </p>
-        </div>
-        <div style="padding-left: 25px; font-size: 15px;">
-            <p>Mr Brown</p>
-        </div>
-        </br>
-        <div style="padding-left: 25px; font-size: 20px;">
-            <p>Contact Number <ion-icon name="create-outline"></ion-icon>
-            </p>
-        </div>
-        <div style="padding-left: 25px; font-size: 15px;">
-            <p>012-345 6789</p>
-        </div>
-        </br>
-        <div style="padding-left: 25px; font-size: 20px;">
-            <p>Email <ion-icon name="create-outline"></ion-icon>
-            </p>
-        </div>
-        <div style="padding-left: 25px; font-size: 15px;">
-            <p>luvbrown@gmail.com</p>
-        </div>
-        </br>
-        <div style="padding-left: 25px; font-size: 20px;">
-            <p>Vehicle Plates <ion-icon name="add-outline"></ion-icon>
-            </p>
-        </div>
-        <div style="padding-left: 25px; font-size: 15px;">
-            <p>ABC1234</p>
-        </div> -->
     </div>
 
     <!-- Button -->
     <div style="text-align: center;">
+        <button type="button" class="submit_btn" onclick="toProfile()">
+            <ion-icon name="chevron-back"></ion-icon>
+        </button>
+
         <button type="button" class="submit_btn" onclick="toSearch()">
             <ion-icon name="search-outline"></ion-icon>
         </button>
@@ -94,11 +65,15 @@
     <script>
         // user click button to return back to home
         function returnToHome() {
-            window.location.href = "mainPage.html"
+            window.location.href = "index.html"
         }
 
         function toSearch() {
             window.location.href = "checkVehicle.html"
+        }
+
+        function toProfile() {
+            window.location.href = "Profile.html"
         }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
