@@ -28,7 +28,7 @@ As mentioned previously, we would fully integrate Firebase as a backend for the 
 - GitHub    : https://github.com/Binana19
 - LinkedIn  : https://www.linkedin.com/in/sabrina-leong-747653166/
 
-<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGccv_M_ggzCA/profile-displayphoto-shrink_800_800/0/1598970224313?e=1644451200&v=beta&t=wA0ZiIlmfaPaswb355t1yDRFD4fNsslzfkcD0Fxj_a4" width=50% height=50%>
+<img src="https://media-exp1.licdn.com/dms/image/C4E03AQGccv_M_ggzCA/profile-displayphoto-shrink_800_800/0/1598970224313?e=1644451200&v=beta&t=wA0ZiIlmfaPaswb355t1yDRFD4fNsslzfkcD0Fxj_a4" width=20% height=20%>
 **Teh Jia Sheng**
 - GitHub    : https://github.com/thejiasheng
 - LinkedIn  : https://www.linkedin.com/in/jia-sheng-teh-2888971b5/
