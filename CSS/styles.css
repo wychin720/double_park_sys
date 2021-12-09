@@ -121,6 +121,7 @@ input {
     margin-left: 5px;
     overflow: auto;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header {
@@ -159,6 +160,7 @@ input {
     font-family: Lucida Sans;
     font-weight: 500;
     padding: 5px 0 7px 20px;
+    text-align: left;
 }
 
 /* Profile */
