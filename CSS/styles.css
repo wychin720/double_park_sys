@@ -1,6 +1,6 @@
 body {
-    background: #221a3f;
-    color: #fff;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     letter-spacing: 2px;
@@ -114,12 +114,13 @@ input {
 
 /* Search and Check-out Vehicle */
 .box {
-    background-color: #7b8edc;
+    background-color: #f0f0f0;
     width: 98%;
     padding-top: 8%;
     padding-bottom: 8%;
     margin-left: 5px;
     overflow: auto;
+    border-radius: 10px;
 }
 
 .header {
