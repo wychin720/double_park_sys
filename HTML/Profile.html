@@ -11,20 +11,16 @@
     <!-- System name-->
 
     <div style="text-align: center;">
-        <!-- TODO : align the text with the logo -->
+        <!-- TODO : centre the text -->
         <div class="invisible-box">
-            <span class="profile-icon">
-                <ion-icon name="person-circle-outline"></ion-icon>
-            </span>
             <span class="profile-text">Hi, User</span>
         </div>
         <br>
 
-        <!-- TODO : Change to different colour to differentiate from the below ones -->
-        <button type="button" class="submit_btn" style="background-color: #8d28c7;">
+        <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
             <ion-icon name="search"></ion-icon>
         </button>
-        <button type="button" class="submit_btn" style="background-color: #5327ca;">
+        <button type="button" class="submit_btn" style="background-color: #5327ca;" onclick="toMain()">
             <ion-icon name="home-outline"></ion-icon>
         </button>
     </div>
@@ -74,6 +70,14 @@
         }
         function toSignOut() {
             window.location.href = "index.html";
+        }
+        function toSearch() {
+            // Go to confirmation page
+            window.location.href = "checkVehicle.html";
+        }
+        function toMain() {
+            // TODO : need to check to navigate
+            window.location.href = "mainPage.html";
         }
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

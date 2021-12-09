@@ -6,24 +6,31 @@
         <title>Double Parking Notification System</title>
     </head>
     <body>
+        <div style="text-align: center;">
+            <!-- TODO : centre the text -->
+            <div class="invisible-box">
+                <span class="profile-text">Hi, User</span>
+            </div>
+            <br>
+    
+            <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
+                <ion-icon name="search"></ion-icon>
+            </button>
+            <button type="button" class="submit_btn" style="background-color: #5327ca;" onclick="toProfile()">
+                <ion-icon name="person-outline"></ion-icon>
+            </button>
+        </div>
+        <!-- TODO : Move the whole section up -->
         <!-- Header -->
         <div class="CI-header">
             <ion-icon name="location" style="color:#d00b0b; font-size:25px;"></ion-icon> 
-            CHECK-IN VEHICLE
+            CHECK-IN
         </div>
         <br>
-
+ 
         <div class="box">
-
             <!-- Input -->
             <form>
-                <div style="text-align: right;">
-                    <button type="button" class="submit_btn" style="margin-top: 0px;" onclick="searchVehicle()">
-                        <ion-icon name="search"></ion-icon>
-                    </button>
-                </div>
-                <div style="padding-left: 20px";>Hi, John Doe
-                </div><br>
                 <p>
                 <label for="location_went">Location(s):</label>
                 <input type="text" id="location_went" name="location_went" placeholder="Insert Here"
@@ -31,13 +38,13 @@
                 </p><br>
                 
                 <p>
-                <label for="time_est" style="padding-right: 30px;">Estimated Time Taken:</label>
+                <label for="time_est" style="padding-right: 30px;">Estimated Time Taken:</label> <br>
+                <!-- TODO : fix the select box alignment -->
                 <select id="time-select">
                     <option value="five_min">5mins</option>
                     <option value="ten_min">10mins</option>
                     <option value="fifteen_min">15mins</option>
                     <option value="twenty_min">20mins</option>
-                    <!-- <option value="None">N/A</option> -->
                 </select>
                 </p>
             </form>
@@ -46,7 +53,7 @@
         <!-- Button -->
         <div>
             <button type="button" class="submit_btn" style="display: block;" onclick="checkIn()">
-                Check-In
+                <ion-icon name="checkmark-outline"></ion-icon>
             </button>
         </div>
 
@@ -62,9 +69,13 @@
               window.location.href = "confirmRegVehicle.html";
             }
 
-            function searchVehicle() {
+            function toSearch() {
               // Go to confirmation page
               window.location.href = "checkVehicle.html";
+            }
+
+            function toProfile() {
+                window.location.href = "Profile.html";
             }
         </script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
