@@ -18,10 +18,10 @@ For this Round 2, most user details are hardcoded in. The MVP is currently in a 
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
 
 ## Authors
-Daniel Goh U-Sheng (https://github.com/daniel-gus)
+Daniel Goh U-Sheng     ||   https://github.com/daniel-gu
 
-Chin Wen Yuan (https://github.com/wychin229)
+Chin Wen Yuan          ||   https://github.com/wychin229
 
-Sabrina Leong Tong Tao (https://github.com/Binana19)
+Sabrina Leong Tong Tao ||   https://github.com/Binana19
 
-Teh Jia Sheng (https://github.com/thejiasheng)
+Teh Jia Sheng          ||   https://github.com/thejiasheng
