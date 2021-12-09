@@ -10,10 +10,11 @@ Round 2 Video - MVP: (insert YouTube link here)
 ## About the prototype
 This web application prototype is created using HTML, CSS, JavaScript and several other JavaScript and CSS libraries. We have partially integrated Firebase as a backend into our system. When we get to Round 3, we further complete the integration of this database system into our web application.
 
-For this Round 2, most user details are hardcoded in. The MVP is currently in a state of navigability where you can freely navigate the web application but don’t have much _____?
+For this Round 2, most user details are hardcoded in. The MVP is currently in a state of navigability where you can freely navigate the web application but don’t have much concrete functionality and we will improve it further in Round 3. The purpose of the current prototype is to demonstrate what our web app would look like.
 
 ## How To Use
-Just click the link and use lah
+First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link.
+![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
 
 ## Further Implementation for Round 3
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
