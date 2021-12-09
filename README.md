@@ -16,6 +16,15 @@ For this Round 2, most user details are hardcoded in. The MVP is currently in a 
 First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link.
 ![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
 
+![image](https://user-images.githubusercontent.com/69201759/145360463-db0bff43-fa48-4e2c-9c7f-91992c04277d.png)
+
+![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
+
+![image](https://user-images.githubusercontent.com/69201759/145360672-db6fa633-6089-49ad-aab3-94d930453d8b.png)
+
+![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
+
+
 ## Further Implementation for Round 3
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
 
