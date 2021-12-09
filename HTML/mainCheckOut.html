@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- Header -->
+
+
+
+
+    <!-- CHANGE THE ICON BELOW-->>
+
+
+
+
+
+    <div class="header">
+        <ion-icon name="search" style="font-size:25px;"></ion-icon>
+        Hi XXX, you currently have a vehicle registered, please check out first 
+    </div>
+    <br><br>
+
+    <!-- Button -->
+    <div>
+        <button type="button" class="submit_btn" style="display: block;" onclick="checkOut()">
+            Check Out
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+
+    <!-- Function -->
+    <script>
+        function checkPlate(toVerify) {
+            var plateNum = document.getElementById("vehicleNo").value;
+            return toVerify == plateNum;
+            //sessionStorage.setItem("plateNo", plateNum);
+            // window.location.href = "checkInfo.html";
+        }
+    </script>
+    <script>
+        function checkOut() {
+            window.location.href = "regVehicle.html";            
+        }
+    </script>
+</body>
+
+</html>

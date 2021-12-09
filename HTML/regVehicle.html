@@ -9,7 +9,7 @@
         <!-- Header -->
         <div class="CI-header">
             <ion-icon name="location" style="color:#d00b0b; font-size:25px;"></ion-icon> 
-            CHECK-IN VEHICLE
+            SIGN UP
         </div>
         <br>
 
@@ -24,34 +24,52 @@
                 </p><br>
                 
                 <p>
-                <label for="contact_number">Phone Number*</label>
+                    <label for="vehicle_plate">Vehicle Model*</label>
+                    <input type="text" id="vehicle_model" name="vehicle_model" placeholder="Insert Here"
+                        required>
+                </p><br>
+                
+                <p>
+                    <label for="vehicle_plate">Vehicle Colour*</label>
+                    <input type="text" id="vehicle_colour" name="vehicle_colour" placeholder="Insert Here"
+                        required>
+                </p><br>
+
+                <p>
+                <label for="contact_number">Contact Number*</label>
                 <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here"
                     required>
                 </p><br>
                 
                 <p>
-                <label for="location_went">Location Went*</label>
-                <input type="text" id="location_went" name="location_went" placeholder="Insert Here"
-                    required>
+                    <label for="driver_name">Driver Name</label>
+                    <select id="driver-select">
+                        <option value="Mr">Mr</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Mrs">Mrs</option>
+                        <!-- <option value="None">N/A</option> -->
+                    </select>
+                    <input type="text" id="driver_name" name="driver_name" >
+                </p>
+
+                <p>
+                    <label for="contact_number">Email*</label>
+                    <input type="text" id="email" name="email" placeholder="Insert Here"
+                        required>
                 </p><br>
                 
                 <p>
-                <label for="driver_name">Driver Name</label>
-                <select id="driver-select">
-                    <option value="Mr">Mr</option>
-                    <option value="Ms">Ms</option>
-                    <option value="Mrs">Mrs</option>
-                    <!-- <option value="None">N/A</option> -->
-                </select>
-                <input type="text" id="driver_name" name="driver_name" >
-                </p>
+                    <label for="contact_number">Password*</label>
+                    <input type="text" id="password" name="password" placeholder="Insert Here"
+                        required>
+                </p><br>                                         
             </form>
         </div>
 
         <!-- Button -->
         <div>
-            <button type="button" class="submit_btn" style="display: block;" onclick="checkForm()">
-                Register Vehicle
+            <button type="button" class="submit_btn" style="display: block;" onclick="signUp()">
+                Sign Up
             </button>
         </div>
 
@@ -78,13 +96,11 @@
                 return flag;
             }
 
-            function checkForm() {
-              // get the input information
+            function signUp() {
+                // Go to the page to register new car
+                // At this point of time, the other page is not created
 
-
-
-              // Go to confirmation page
-              window.location.href = "confirmRegVehicle.html";
+              //window.location.href = "confirmRegVehicle.html";
             }
 
             // No onger in use! Replaced by confirmForm()
