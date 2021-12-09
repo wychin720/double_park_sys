@@ -104,8 +104,8 @@ input {
 
 #driver_name {
     display: inline-block;
-    width: 70%;
-    margin-left: 5px;
+    width: 71%;
+    margin-left: -5px;
     padding: 3px
 }
 
