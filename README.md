@@ -5,7 +5,7 @@ We highly encourage you to view our submission videos for this Hackathon!
 
 Round 1 Video - [Idea Pitch](https://youtu.be/RfE3DayPM4U)
 
-Round 2 Video - MVP: (insert YouTube link here)
+Round 2 Video - [MVP](https://youtu.be/7qYWFXDlBHQ)
 
 ## About the prototype
 This web application prototype is created using HTML, CSS, JavaScript and several other JavaScript and CSS libraries. We have partially integrated Firebase as a backend into our system. When we get to Round 3, we further complete the integration of this database system into our web application.
@@ -33,7 +33,7 @@ Lastly, each user that signs up will have a profile as follows:
 
 ![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
 
-That concludes the quick summary, do refer to the Round 2 video here (INSERT YOUTUBE LINK HERE) where we demo further the flow between each page!
+That concludes the quick summary, do refer to the Round 2 video [here](https://youtu.be/7qYWFXDlBHQ) where we demo further the flow between each page!
 
 
 ## Further Implementation for Round 3
