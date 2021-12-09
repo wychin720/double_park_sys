@@ -9,22 +9,29 @@
 
 <body>
     <!-- Header -->
+    <div style="text-align: center;">
+        <!-- TODO : centre the text -->
+        <div class="invisible-box">
+            <span class="profile-text">Hi, User</span>
+        </div>
+        <br>
 
+        <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
+            <ion-icon name="search"></ion-icon>
+        </button>
+        <button type="button" class="submit_btn" style="background-color: #5327ca;" onclick="toProfile()">
+            <ion-icon name="person-outline"></ion-icon>
+        </button>
+    </div>
 
-
-
-    <!-- CHANGE THE ICON BELOW-->>
-
-
-
-
-
+    <!-- CHANGE THE ICON BELOW-->
     <div class="header">
-        <ion-icon name="search" style="font-size:25px;"></ion-icon>
-        Hi XXX, you currently have a vehicle registered, please check out first 
+        You have not <br>check out 
     </div>
     <br><br>
-
+    <div style="text-align: center; font-size: 40px;">
+        <ion-icon name="arrow-down-circle-outline" ></ion-icon>
+    </div>
     <!-- Button -->
     <div>
         <button type="button" class="submit_btn" style="display: block;" onclick="checkOut()">
@@ -39,11 +46,11 @@
 
     <!-- Function -->
     <script>
-        function checkPlate(toVerify) {
-            var plateNum = document.getElementById("vehicleNo").value;
-            return toVerify == plateNum;
-            //sessionStorage.setItem("plateNo", plateNum);
-            // window.location.href = "checkInfo.html";
+        function toSearch() {
+            window.location.href = "checkVehicle.html";
+        }
+        function toProfile() {
+            window.location.href = "Profile.html";
         }
     </script>
     <script>
@@ -51,6 +58,7 @@
             window.location.href = "mainPage.html";            
         }
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
