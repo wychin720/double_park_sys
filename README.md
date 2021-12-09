@@ -1,7 +1,7 @@
 # Double Parking Notification App
 Greetings! We are Daniel, Wen Yuan, Sabrina and Jia Sheng and welcome to our Double Parking Notification System! This prototype solution stems from an ongoing issue of double parking incidents in busy areas in Malaysia. Feel free to check our our web application here [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) (usage of the web app will be explain in section below "How To Use")
 
-If you’re interested, do view our submission videos for this Hackathon!
+We highly encourage you to view our submission videos for this Hackathon!
 
 Round 1 Video - [Idea Pitch](https://youtu.be/RfE3DayPM4U)
 
