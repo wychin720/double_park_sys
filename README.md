@@ -13,22 +13,27 @@ This web application prototype is created using HTML, CSS, JavaScript and severa
 For this Round 2, most user details are hardcoded in. The MVP is currently in a state of navigability where you can freely navigate the web application but don’t have much concrete functionality and we will improve it further in Round 3. The purpose of the current prototype is to demonstrate what our web app would look like.
 
 ## How To Use
-First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link.
-![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
+First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link and you will be greeted with the following page:
+
+If you want to "Search a Vehicle", you will see the following to enter a vehicle plate:
 
 ![image](https://user-images.githubusercontent.com/69201759/145360463-db0bff43-fa48-4e2c-9c7f-91992c04277d.png)
 
+
+"Signing In" simply asks you to enter your email and password, to which you will then be brought to this page:
+![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
+
+If you would like to "Sign Up":
 ![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
 
 ![image](https://user-images.githubusercontent.com/69201759/145360672-db6fa633-6089-49ad-aab3-94d930453d8b.png)
 
+Lastly, each user that signs up will have a profile as follows:
 ![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
 
 
 ## Further Implementation for Round 3
 As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
-
-Stay tune for more.
 
 ## Authors
 **Daniel Goh U-Sheng**     
