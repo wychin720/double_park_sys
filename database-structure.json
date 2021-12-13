@@ -1,0 +1,17 @@
+{
+    "users": [ {
+        "brandModel": "car model and brand",
+        "colour": "colour of car",
+        "name": "car owner name",
+        "phone": "contact number of owner",
+        "plate": "car plate",
+        "reg_time": "registration timestamp",
+        "latest_park_id": "latest double park entry id"
+    }],
+    "parking-entries": [ {
+        "location": "parking location",
+        "timestamp": "parking timestamp",
+        "uid": "user id in users collection",
+        "check-out": "boolean"
+    }]
+}
