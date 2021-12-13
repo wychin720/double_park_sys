@@ -1,13 +1,15 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS/styles.css">
-        <title>Double Parking Notification System</title>
-    </head>
-    <body>
-        <!-- Header -->
-        <!-- <div style="text-align: center;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Double Parking Notification System</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <!-- <div style="text-align: center;">
             <div class="page-header">
                 <span class="header-icon">
                     <ion-icon name="location" style="color:#d00b0b;margin-left: -23px;"></ion-icon>
@@ -15,113 +17,184 @@
                 <span class="header-text" id="long-header-text">SIGN UP</span>
         </div> -->
 
-        <div class="only-icon" style="text-align: center; margin-top: 30%;">
-            <ion-icon name="reader"></ion-icon>
-            <ion-icon name="pencil" style="font-size: 60px;"></ion-icon>
-        </div><br>
+    <div class="only-icon" style="text-align: center; margin-top: 30%;">
+        <ion-icon name="reader"></ion-icon>
+        <ion-icon name="pencil" style="font-size: 60px;"></ion-icon>
+    </div><br>
 
-        <div class="box">
+    <div class="box">
 
-            <!-- Input -->
-            <form>
-                <p>
+        <!-- Input -->
+        <div>
+            <p>
                 <label for="vehicle_plate">Vehicle Plate*</label>
-                <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Insert Here"
-                    required>
-                </p>
-                
-                <p>
-                <label for="vehicle_plate">Vehicle Model*</label>
-                <input type="text" id="vehicle_model" name="vehicle_model" placeholder="Insert Here"
-                    required>
-                </p>
-                
-                <p>
-                <label for="vehicle_plate">Vehicle Colour*</label>
-                <input type="text" id="vehicle_colour" name="vehicle_colour" placeholder="Insert Here"
-                    required>
-                </p>
+                <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Insert Here" required>
+            </p>
 
-                <p>
+            <p>
+                <label for="vehicle_plate">Vehicle Model*</label>
+                <input type="text" id="vehicle_model" name="vehicle_model" placeholder="Insert Here" required>
+            </p>
+
+            <p>
+                <label for="vehicle_plate">Vehicle Colour*</label>
+                <input type="text" id="vehicle_colour" name="vehicle_colour" placeholder="Insert Here" required>
+            </p>
+
+            <p>
                 <label for="contact_number">Contact Number*</label>
-                <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here"
-                    required>
-                </p>
-                
-                <p>
-                <label for="driver_name">Driver Name</label> 
+                <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here" required>
+            </p>
+
+            <p>
+                <label for="driver_name">Driver Name</label>
                 <select id="driver-select">
                     <option value="Mr">Mr</option>
                     <option value="Ms">Ms</option>
                     <option value="Mrs">Mrs</option>
-                    <!-- <option value="None">N/A</option> -->
                 </select>
-                <input type="text" id="driver_name" name="driver_name" >
-                </p>
+                <input type="text" id="driver_name" name="driver_name">
+            </p>
 
-                <p>
+            <p>
                 <label for="contact_number">Email*</label>
-                <input type="text" id="email" name="email" placeholder="Insert Here"
-                    required>
-                </p>
-                
-                <p>
+                <input type="text" id="email" name="email" placeholder="Insert Here" required>
+            </p>
+
+            <p>
                 <label for="contact_number">Password*</label>
-                <input type="text" id="password" name="password" placeholder="Insert Here"
-                    required>
-                </p>                                         
-            </form>
+                <input type="text" id="password" name="password" placeholder="Insert Here" required>
+            </p>
         </div>
+    </div>
 
-        <!-- Button -->
-        <div>
-            <button type="button" class="submit_btn" style="display: block;" onclick="signUp()">
-                Sign Up
-            </button>
-        </div>
+    <!-- Button -->
+    <div>
+        <button type="button" class="submit_btn" style="display: block;" id="signup_button">
+            Sign Up
+        </button>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            Copyright © 2021 Dumpling Grads • Made with sweat and tears
-        </div>
-        
-        <!-- Function -->
-        <script>
-            function validateForm() {
-                // TODO : add highlight of box ? for the missing mandatory fields
-                var inputs = document.querySelectorAll("input");
-                var flag = false;
-                Array.prototype.slice.call(inputs).forEach(function (input) {
-                    if (input.hasAttribute('required') && !input.checkValidity()) {
-                        flag = true;
-                    }
-                }, false);
-    
-                if (flag == true) {
-                    alert("Please fill in missing details.");
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2021 Dumpling Grads • Made with sweat and tears
+    </div>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <!-- Function -->
+    <script>
+        document.getElementById("signup_button").addEventListener("click", e => {
+            e.preventDefault(); // stop the form from submitting
+            submitForm();
+        })
+
+        function validateForm() {
+            // TODO : add highlight of box ? for the missing mandatory fields
+            var inputs = document.querySelectorAll("input");
+            var flag = false;
+            Array.prototype.slice.call(inputs).forEach(function (input) {
+                if (input.hasAttribute('required') && !input.checkValidity()) {
+                    flag = true;
                 }
-                return flag;
-            }
+            }, false);
 
-            function signUp() {
-              window.location.href = "mainPage.html";
+            if (flag == true) {
+                alert("Please fill in missing details.");
             }
+            return flag;
+        }
 
-            // No onger in use! Replaced by confirmForm()
-            function submitForm() {
-                if (!validateForm()) {
-                    var success = true;
-                    if (success == true) {
-                        // TODO : add entry into firebase
-                        alert("You have successfully registered your vehicle!");
+        // function signUp() {
+        //     window.location.href = "mainPage.html";
+        // }
+
+        function backend(data) {
+            const firebaseConfig = {
+                apiKey: "AIzaSyAXk8gPSjviouGc-pfkoXdFzHDcy_fR-dM",
+                authDomain: "adminproject-129f1.firebaseapp.com",
+                databaseURL: "https://adminproject-129f1.firebaseio.com",
+                projectId: "adminproject-129f1",
+                storageBucket: "adminproject-129f1.appspot.com",
+                messagingSenderId: "52547207023731",
+                appId: "1:944478240098:android:794f67ffbebd2508bac03b",
+            };
+            const app = firebase.initializeApp(firebaseConfig);
+            const auth = app.auth();
+            const db = app.firestore();
+            data.email = data.email.replace("/\s+g", '');
+            auth.createUserWithEmailAndPassword(data.email, data.password).then(async () => {
+                //auth.currentUser.sendEmailVerification();
+                console.log(data);
+                console.log(auth.currentUser.uid);
+                const new_id = auth.currentUser.uid;
+                const currentDate = new Date();
+                console.log(currentDate);
+                const see = await db.collection("users").doc(new_id).set(
+                    {
+                        brandModel: data.model,
+                        colour: data.colour,
+                        name: data.name,
+                        phone: data.phone,
+                        plate: data.plate,
+                        reg_time: currentDate,
+                        latest_park_id: "" // this is undefined
                     }
-                    else {
-                        alert("Registration unsuccessful, please try again.");
-                    }
-                    window.location.href = "index.html";
+                );
+                //console.log(see);
+                //db.collection('users').doc("AF").set({time: currentDate.toString()}).then(console.log("hi"));
+                auth.signOut();
+                alert("Registration successful");
+                // TODO : should reroute to main page , NOT index
+                window.location.href = "index.html";
+            }).catch(err => {
+                if (err.code == "auth/email-already-in-use") {
+                    alert("Email already in used, try again with a different one.");
                 }
+                else if (err.code == "auth/invalid-email") {
+                    alert("Invalid email, try again");
+                }
+                else {
+                    console.log(err);
+                    //alert("Register fail, try again");
+                }
+            })
+        }
+
+        async function submitForm() {
+            if (!validateForm()) {
+                var success = true;
+                // check if user already registered
+                if (success == true) {
+                    // TODO : add entry into firebase
+                    // 1) retreive the values
+                    const plate = document.getElementById("vehicle_plate").value;
+                    const model = document.getElementById("vehicle_model").value;
+                    const colour = document.getElementById("vehicle_colour").value;
+                    const phone = document.getElementById("contact_number").value;
+                    const name = document.getElementById("driver-select").value + document.getElementById("driver_name").value;
+                    const email = document.getElementById("email").value;
+                    const pwd = document.getElementById("password").value;
+                    const data = {
+                        email: email,
+                        password: pwd,
+                        plate: plate,
+                        model: model,
+                        name: name,
+                        phone: phone,
+                        colour: colour
+                    }
+                    await backend(data);
+                }
+                else {
+                    alert("Registration unsuccessful, please try again.");
+                }
+                // window.location.href = "index.html";
             }
-        </script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    </body>
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</body>
+
 </html>
