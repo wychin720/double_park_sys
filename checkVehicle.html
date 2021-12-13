@@ -71,10 +71,10 @@
                 }
             });
             console.log(data);
-            console.log(data[0].latest_entry_id);
-            if (flag == true && data[0].latest_entry_id != undefined) {
+            console.log(data[0].latest_park_id);
+            if (flag == true && data[0].latest_park_id != undefined) {
                 // get the details from parking-entries collection
-                const docRef = await db.collection("parking-entries").doc(data[0].latest_entry_id);
+                const docRef = await db.collection("parking-entries").doc(data[0].latest_park_id);
                 docRef.get().then((doc) => {
                     if (doc.exists) {
                         console.log(doc.data());
@@ -94,7 +94,7 @@
                 })                
             }
             else {
-                window.location.href = "checkNotFound.html";
+                //window.location.href = "checkNotFound.html";
             }
         }
 
