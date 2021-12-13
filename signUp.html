@@ -83,6 +83,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <!-- external js files -->
+    <script src="scripts/config.js"></script>
     <!-- Function -->
     <script>
         document.getElementById("signup_button").addEventListener("click", e => {
@@ -111,23 +113,14 @@
         // }
 
         function backend(data) {
-            const firebaseConfig = {
-                apiKey: "AIzaSyAXk8gPSjviouGc-pfkoXdFzHDcy_fR-dM",
-                authDomain: "adminproject-129f1.firebaseapp.com",
-                databaseURL: "https://adminproject-129f1.firebaseio.com",
-                projectId: "adminproject-129f1",
-                storageBucket: "adminproject-129f1.appspot.com",
-                messagingSenderId: "52547207023731",
-                appId: "1:944478240098:android:794f67ffbebd2508bac03b",
-            };
             const app = firebase.initializeApp(firebaseConfig);
             const auth = app.auth();
             const db = app.firestore();
             data.email = data.email.replace("/\s+g", '');
             auth.createUserWithEmailAndPassword(data.email, data.password).then(async () => {
-                //auth.currentUser.sendEmailVerification();
-                console.log(data);
-                console.log(auth.currentUser.uid);
+                auth.currentUser.sendEmailVerification();
+                // console.log(data);
+                // console.log(auth.currentUser.uid);
                 const new_id = auth.currentUser.uid;
                 const currentDate = new Date();
                 console.log(currentDate);
@@ -144,9 +137,9 @@
                 );
                 //console.log(see);
                 //db.collection('users').doc("AF").set({time: currentDate.toString()}).then(console.log("hi"));
-                auth.signOut();
+                //auth.signOut();
                 alert("Registration successful");
-                // TODO : should reroute to main page , NOT index
+                // TODO : should reroute to main page based on the signed in credentials, NOT index
                 window.location.href = "index.html";
             }).catch(err => {
                 if (err.code == "auth/email-already-in-use") {
@@ -167,8 +160,7 @@
                 var success = true;
                 // check if user already registered
                 if (success == true) {
-                    // TODO : add entry into firebase
-                    // 1) retreive the values
+                    // retreive the values
                     const plate = document.getElementById("vehicle_plate").value;
                     const model = document.getElementById("vehicle_model").value;
                     const colour = document.getElementById("vehicle_colour").value;
