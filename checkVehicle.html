@@ -60,26 +60,37 @@
             const db = app.firestore();
             var flag = false;
             var data = [];
-            const found = await db.collection("users").get();
-            found.forEach((doc) => {
-                if(checkPlate(doc.data().plate) == true) {
+            const users = await db.collection("users").get();
+            users.forEach((doc) => {
+                if (checkPlate(doc.data().plate) == true) {
                     flag = true;
                     data.push(doc.data());
                 }
             });
             console.log(data);
-            if(flag == true) {
-                sessionStorage.setItem("plateNo", plateNum);
-                sessionStorage.setItem("phone", data[0].phone);
-                sessionStorage.setItem("name", data[0].name);
-                sessionStorage.setItem("loc", data[0].location);
-                sessionStorage.setItem("colour", data[0].colour);
-                console.log(typeof data[0].time);
-                sessionStorage.setItem("time", data[0].time.toDate().toString());
-                sessionStorage.setItem("brand", data[0].brandModel);
-                window.location.href = "checkFound.html";
+            console.log(data[0].latest_entry_id);
+            if (flag == true && data[0].latest_entry_id != undefined) {
+                // get the details from parking-entries collection
+                const docRef = await db.collection("parking-entries").doc(data[0].latest_entry_id);
+                docRef.get().then((doc) => {
+                    if (doc.exists) {
+                        console.log(doc.data());
+                        sessionStorage.setItem("loc", doc.data().location);
+                        sessionStorage.setItem("time", doc.data().timestamp.toDate().toString());
+                        sessionStorage.setItem("plateNo", plateNum);
+                        sessionStorage.setItem("phone", data[0].phone);
+                        sessionStorage.setItem("name", data[0].name);
+                        sessionStorage.setItem("colour", data[0].colour);
+                        sessionStorage.setItem("brand", data[0].brandModel);
+                        //console.log(sessionStorage);
+                        window.location.href = "checkFound.html";
+                    }
+                    else {
+                        console.log("document lost.");
+                    }
+                })                
             }
-            else{
+            else {
                 window.location.href = "checkNotFound.html";
             }
         }
