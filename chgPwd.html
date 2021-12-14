@@ -77,11 +77,14 @@
                     console.log(doc.data().email);
                     const email = doc.data().email;
                     auth.sendPasswordResetEmail(email).then(function(){
-                            window.alert("An email has been sent to you. Please check and verify it.")  
+                            window.alert("An email has been sent to you. Please check and verify it.")
+                            returnToProfile()
                         .catch(function(error){
                             window.alert("An error has occured.")
                         })
                     })
+                    //window.location.href = "profile.html"
+
                 }
             })
         }
