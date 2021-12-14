@@ -60,7 +60,9 @@
         <!-- Display Information , inject element holding data here -->
         <div class="box" id="outer_box">
             <span for="year">Filter by:</span>
-            <select name="year" id="year" onchange="refreshCollapsible()"><option></option></select>
+            <select name="year" id="year" onchange="refreshCollapsible()">
+                <option></option>
+            </select>
             <p></p>
             <div id="his_table"></div>
         </div>
@@ -116,14 +118,14 @@
             function refreshCollapsible() {
                 // clear all entries
                 const toInject = document.getElementById("his_table");
-                toInject.innerHTML= "";
+                toInject.innerHTML = "";
                 const filterYear = document.getElementById("year").value;
                 console.log(filterYear);
                 // add in entries after refresh
                 for (let i = 0; i < data.length; i++) {
                     var date = new Date(data[i].timestamp);
                     console.log(date.getFullYear());
-                    if(date.getFullYear() == filterYear) {
+                    if (date.getFullYear() == filterYear) {
                         console.log("hi");
                         injectCollapsible(data[i]);
                     }
@@ -134,11 +136,12 @@
 
             async function load() {
                 //const uid = localStorage.getItem("UID");
-                const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2";
+                const uid = "Lv4nVURG61gGvpK56dnAyXMDfUn1"; // to see no history found
+                const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
                 const app = firebase.initializeApp(firebaseConfig);
                 const db = app.firestore();
-                const entries = await db.collection("parking-entries").orderBy("timestamp","asc").get();
-                
+                const entries = await db.collection("parking-entries").orderBy("timestamp", "asc").get();
+
                 var years = [];
                 entries.forEach((doc) => {
                     if (doc.data().uid == uid) {
@@ -150,11 +153,17 @@
                 //console.log(years);
                 const unique_years = years.filter((x, i, a) => a.indexOf(x) == i);
                 //console.log(unique_years);
-                for (let i = 0; i < unique_years.length; i++) {
-                    injectYearOpt(unique_years[i]);
+                if (unique_years.length > 0) {
+                    for (let i = 0; i < unique_years.length; i++) {
+                        injectYearOpt(unique_years[i]);
+                    }
+                    for (let i = 0; i < data.length; i++) {
+                        injectCollapsible(data[i]);
+                    }
                 }
-                for (let i = 0; i < data.length; i++) {
-                    injectCollapsible(data[i]);
+                else{
+                    const toInject = document.getElementById("his_table");
+                    toInject.innerHTML = "<p><a class='info'>No history found.</a></p>";
                 }
             }
             function injectYearOpt(year) {
