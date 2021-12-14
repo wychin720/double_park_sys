@@ -235,7 +235,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
@@ -374,7 +374,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
@@ -497,7 +497,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
@@ -672,7 +672,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
