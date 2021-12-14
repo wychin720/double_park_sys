@@ -72,6 +72,14 @@
             window.location.href = "chgPwd.html";
         }
         function toSignOut() {
+            // Add an alert to notify user that they have successfully signed out
+            window.alert("You have successfully signed out.");
+
+            // Clear local storage
+            localStorage.clear();
+            sessionStorage.clear();
+            
+            // Redirect
             window.location.href = "index.html";
         }
         function toSearch() {
