@@ -38,6 +38,10 @@
             <button type="button" class="submit_btn" style="display: block;" onclick="signIn()">
                 Sign In
             </button>
+
+            <button type="button" class="forgot_password" style="display: block;" onclick="forgotPassword()">
+                Forgot Password?
+            </button>
         </div>
 
         <!-- Footer -->
@@ -52,6 +56,10 @@
         <script src="scripts/config.js"></script>
         <!-- Function -->
         <script>
+            function forgotPassword(){
+                window.location.href = "forgotPassword.html";
+            }
+
             function checkTextField() {
                 var emailElem = document.getElementById("email");
                 var pwdElem = document.getElementById("password");
