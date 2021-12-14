@@ -189,6 +189,15 @@ input {
     margin-right: -5px;
 }
 
+.forgot_password {
+    border: none;
+    background: transparent;
+    color: blue;
+    text-decoration: underline;
+    margin-top: -8px;
+    margin-left: 62.9%;
+}
+
 
 /* ******************************************************************************************************************************************************** */
 
@@ -330,6 +339,17 @@ input {
         background: transparent;
         border: 0;
         border-bottom: 2px solid #807f7f;
+    }
+    
+    #link-size.forgot_password {
+        font-size: 13px;
+        margin-left: 59.2%;
+    }
+
+    #center.forgot_password {
+        font-size: 20px;
+        margin-top: 50px;
+        margin-left: 27%;
     }
     
 }
