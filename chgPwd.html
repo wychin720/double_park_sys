@@ -59,15 +59,6 @@
     
     <!-- Function -->
     <script>
-        // user click button to return back to home
-        function returnToHome() {
-            window.location.href = "index.html";
-        }
-
-        function toSearch() {
-            window.location.href = "checkVehicle.html";
-        }
-
         function returnToProfile() {
             window.location.href = "profile.html";
         }
@@ -76,27 +67,23 @@
             const app = firebase.initializeApp(firebaseConfig);
             const auth = app.auth();
             const db = app.firestore();
-
-            const user = auth.currentUser.uid;
             
-            var user_id = sessionStorage.getItem("UID");
+            var user_id = localStorage.getItem("UID");
 
-            //const docRef = await db.collection("users").doc(user.uid);
-            //const email = "dgoh0005@student.monash.edu"
-            //console.log(user.uid);
-            console.log(user_id);
-
-            //docRef.get().then(function(doc){
-                auth.sendPasswordResetEmail(email).then(function(){
-                window.alert("An email has been sent to you. Please check and verify it.")
-                
-            //})
-            .catch(function(error){
-                window.alert("An error has occured.")
+            const docRef = await db.collection("users").doc(user_id.toString());
+            docRef.get().then((doc) => {
+                if (doc.exists){
+                    console.log(user_id.toString());
+                    console.log(doc.data().email);
+                    const email = doc.data().email;
+                    auth.sendPasswordResetEmail(email).then(function(){
+                            window.alert("An email has been sent to you. Please check and verify it.")  
+                        .catch(function(error){
+                            window.alert("An error has occured.")
+                        })
+                    })
+                }
             })
-            })
-
-            
         }
 
     </script>
