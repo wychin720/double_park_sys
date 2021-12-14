@@ -108,51 +108,61 @@
             return flag;
         }
 
-        // function signUp() {
-        //     window.location.href = "mainPage.html";
-        // }
+        function checkPlate(toVerify) {
+            var plateNum = document.getElementById("vehicle_plate").value;
+            return toVerify == plateNum;
+        }
 
-        function backend(data) {
+        async function backend(data) {
             const app = firebase.initializeApp(firebaseConfig);
             const auth = app.auth();
             const db = app.firestore();
             data.email = data.email.replace("/\s+g", '');
-            auth.createUserWithEmailAndPassword(data.email, data.password).then(async () => {
-                auth.currentUser.sendEmailVerification();
-                // console.log(data);
-                // console.log(auth.currentUser.uid);
-                const new_id = auth.currentUser.uid;
-                const currentDate = new Date();
-                console.log(currentDate);
-                const see = await db.collection("users").doc(new_id).set(
-                    {
-                        brandModel: data.model,
-                        colour: data.colour,
-                        name: data.name,
-                        phone: data.phone,
-                        plate: data.plate,
-                        reg_time: currentDate,
-                        latest_park_id: "" // this is undefined
+            // check car plate 
+            var flag = false;
+            const users = await db.collection("users").get();
+            users.forEach((doc) => {
+                if (checkPlate(doc.data().plate) == true) {
+                    flag = true;
+                }
+            });
+            if (flag == false) {
+                auth.createUserWithEmailAndPassword(data.email, data.password).then(async () => {
+                    auth.currentUser.sendEmailVerification();
+                    const new_id = auth.currentUser.uid;
+                    const currentDate = new Date();
+                    console.log(currentDate);
+                    const see = await db.collection("users").doc(new_id).set(
+                        {
+                            brandModel: data.model,
+                            colour: data.colour,
+                            name: data.name,
+                            phone: data.phone,
+                            plate: data.plate,
+                            reg_time: currentDate,
+                            latest_park_id: "" // this is undefined
+                        }
+                    );
+                    auth.signOut();
+                    alert("Registration successful, a verification email has been sent to your inbox. Please verify yourself.");
+                    // user has to sign-in after verification done 
+                    window.location.href = "index.html";
+                }).catch(err => {
+                    if (err.code == "auth/email-already-in-use") {
+                        alert("Email already in used, try again with a different one.");
                     }
-                );
-                //console.log(see);
-                //db.collection('users').doc("AF").set({time: currentDate.toString()}).then(console.log("hi"));
-                //auth.signOut();
-                alert("Registration successful");
-                // TODO : should reroute to main page based on the signed in credentials, NOT index
-                window.location.href = "index.html";
-            }).catch(err => {
-                if (err.code == "auth/email-already-in-use") {
-                    alert("Email already in used, try again with a different one.");
-                }
-                else if (err.code == "auth/invalid-email") {
-                    alert("Invalid email, try again");
-                }
-                else {
-                    console.log(err);
-                    //alert("Register fail, try again");
-                }
-            })
+                    else if (err.code == "auth/invalid-email") {
+                        alert("Invalid email, try again");
+                    }
+                    else {
+                        console.log(err);
+                        alert("Register fail, try again");
+                    }
+                })
+            }
+            else {
+                alert("The car plate already exists.")
+            }
         }
 
         async function submitForm() {
