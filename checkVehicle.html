@@ -72,7 +72,8 @@
                     if (doc.exists) {
                         console.log(doc.data());
                         sessionStorage.setItem("loc", doc.data().location);
-                        sessionStorage.setItem("time", doc.data().timestamp.toDate().toString());
+                        console.log(typeof doc.data().timestamp);
+                        sessionStorage.setItem("time", doc.data().timestamp.toString());
                         sessionStorage.setItem("plateNo", plateNum);
                         sessionStorage.setItem("phone", data[0].phone);
                         sessionStorage.setItem("name", data[0].name);
