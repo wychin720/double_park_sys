@@ -47,17 +47,10 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <!-- external js files -->
+    <script src="scripts/config.js"></script>
     <script>
         async function verifyPlate() {
-            const firebaseConfig = {
-                apiKey: "AIzaSyAXk8gPSjviouGc-pfkoXdFzHDcy_fR-dM",
-                authDomain: "adminproject-129f1.firebaseapp.com",
-                databaseURL: "https://adminproject-129f1.firebaseio.com",
-                projectId: "adminproject-129f1",
-                storageBucket: "adminproject-129f1.appspot.com",
-                messagingSenderId: "52547207023731",
-                appId: "1:944478240098:android:794f67ffbebd2508bac03b",
-            };
             const plateNum = document.getElementById("vehicleNo").value;
             const app = firebase.initializeApp(firebaseConfig);
             const db = app.firestore();
