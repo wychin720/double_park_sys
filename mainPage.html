@@ -76,7 +76,7 @@
             const app = firebase.initializeApp(firebaseConfig);
             const auth = app.auth();
             const db = app.firestore();
-            var user_id = sessionStorage.getItem("UID");
+            var user_id = localStorage.getItem("UID");
             var location_went = document.getElementById("location_went").value;
             var duration = document.getElementById("time-select").value;
             console.log(Date().toString());
@@ -86,12 +86,39 @@
                 "uid": user_id,
                 "check-out": false
             }
-            await db.collection("parking-entries").add(parking_entry).then(() => {
-                console.log("Check in sucessfully! "+parking_entry);
+            var entry_id = undefined;
+            await db.collection("parking-entries").add(parking_entry).then((entry_doc_id) => {
+                console.log("new entry is:" + entry_doc_id.id);
+                entry_id = entry_doc_id.id;
+
             });
 
-            //UPDATE THE VALUES ON THE USER'S LATEST_PARK_ID
-            //
+            var prev_entry_id = undefined;
+            //SET THE PREVIOUS PARKING ENTRY TO FALSE
+            var user_details = await db.collection("users").doc(user_id.toString());
+            user_details.get().then((doc) => {
+                if (doc.exists) {
+                    console.log("user data")
+                    console.log(doc.data().latest_park_id);
+                    prev_entry_id = doc.data().latest_park_id;
+                    //UPDATE THE VALUES ON THE USER'S LATEST_PARK_ID
+                    db.collection("users").doc(user_id.toString()).update(
+                        {
+                            latest_park_id: entry_id
+                        });
+                    
+                    //check out the previous entry for the user
+                    if (prev_entry_id != "") {
+                        console.log("i have prev entry!" + prev_entry_id);
+                        db.collection("parking-entries").doc(prev_entry_id).update(
+                            {
+                                "check-out": true
+                            });
+                    }
+                }
+            }
+            )
+
             window.location.href = "mainCheckOut.html";
 
         }

@@ -82,7 +82,7 @@
                             console.log("UID is "+firebaseUser.user._delegate.uid);
                             var uid = firebaseUser.user._delegate.uid
                             //store details in session storage
-                            sessionStorage.setItem("UID",firebaseUser.user._delegate.uid );
+                            localStorage.setItem("UID",firebaseUser.user._delegate.uid );
                             window.location.href = "mainPage.html";
                         }).
                         catch(function (error) {
