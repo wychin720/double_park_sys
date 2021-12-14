@@ -26,28 +26,28 @@
 
         <!-- Input -->
         <div>
-            <p>
-                <label for="vehicle_plate">Vehicle Plate*</label>
-                <input type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Insert Here" required>
+            <p class="form__group field">
+                <input class="form__field" type="text" id="vehicle_plate" name="vehicle_plate" placeholder="Vehicle Plate" required />
+                <label for="vehicle_plate" class="form__label">Vehicle Plate*</label>
+            </p>
+
+            <p class="form__group field">
+                <input class="form__field" type="text" id="vehicle_model" name="vehicle_model" placeholder="Vehicle Model" required />
+                <label for="vehicle_plate" class="form__label">Vehicle Model*</label>
+            </p>
+
+            <p class="form__group field">
+                <input class="form__field" type="text" id="vehicle_colour" name="vehicle_colour" placeholder="Vehicle Colour" required />
+                <label for="vehicle_plate" class="form__label">Vehicle Colour*</label>
+            </p>
+
+            <p class="form__group field">
+                <input class="form__field" type="text" id="contact_number" name="contact_number" placeholder="Contact Number" required />
+                <label for="contact_number" class="form__label">Contact Number*</label>
             </p>
 
             <p>
-                <label for="vehicle_plate">Vehicle Model*</label>
-                <input type="text" id="vehicle_model" name="vehicle_model" placeholder="Insert Here" required>
-            </p>
-
-            <p>
-                <label for="vehicle_plate">Vehicle Colour*</label>
-                <input type="text" id="vehicle_colour" name="vehicle_colour" placeholder="Insert Here" required>
-            </p>
-
-            <p>
-                <label for="contact_number">Contact Number*</label>
-                <input type="text" id="contact_number" name="contact_number" placeholder="Insert Here" required>
-            </p>
-
-            <p>
-                <label for="driver_name">Driver Name</label>
+                <label id="driver-label" for="driver_name">Driver Name</label>
                 <select id="driver-select">
                     <option value="Mr">Mr</option>
                     <option value="Ms">Ms</option>
@@ -56,14 +56,14 @@
                 <input type="text" id="driver_name" name="driver_name">
             </p>
 
-            <p>
-                <label for="contact_number">Email*</label>
-                <input type="text" id="email" name="email" placeholder="Insert Here" required>
+            <p class="form__group field">
+                <input class="form__field" type="text" id="email" name="email" placeholder="Email" required />
+                <label for="contact_number" class="form__label">Email*</label>
             </p>
 
-            <p>
-                <label for="contact_number">Password*</label>
-                <input type="text" id="password" name="password" placeholder="Insert Here" required>
+            <p class="form__group field">
+                <input class="form__field" type="text" id="password" name="password" placeholder="Password" required />
+                <label for="contact_number" class="form__label">Password*</label>
             </p>
         </div>
     </div>
