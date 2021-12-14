@@ -1,3 +1,4 @@
+
 /* General */
 
 body {
@@ -186,25 +187,39 @@ input {
     margin-right: -5px;
 }
 
+.CI-confirm-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: -30px;
+    padding-right: 7px;
+    text-align: left;
+}
+
+.CI-confirm-icon {
+    color:#69df59; 
+    font-size: 25px; 
+    --ionicon-stroke-width: 40px;
+    padding-top: 5px;
+    margin-right: -20px;
+}
+
 .forgot_password {
     border: none;
     background: transparent;
     color: blue;
     text-decoration: underline;
-    margin-top: -10px;
+    /* margin-top: -10px; */
+    margin-top: 50px;
     margin-left: 62.9%;
 }
 
-#link-size.forgot_password {
+/* #link-size.forgot_password {
     font-size: 13px;
-    margin-left: 54%;
-}
+    margin-left: 59.2%;
+} */
 
-#center.forgot_password {
-    font-size: 20px;
-    margin-top: 50px;
-    margin-left: 24%;
-}
+
 
 /* ******************************************************************************************************************************************************** */
 
@@ -245,6 +260,11 @@ input {
         display: block;
         margin: 50% auto 0 auto;
         max-width: 75px;
+    }
+
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 85px;
     }
     
     .margin-top-adj {
@@ -347,7 +367,22 @@ input {
         border: 0;
         border-bottom: 2px solid #807f7f;
     }
-    
+
+    #center.forgot_password {
+        font-size: 20px;
+        margin-left: 26%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: 3px;
+    }
+
+    #label-size.reset-email {
+        margin-top: -15px;
+        font-size: 1.3rem;
+    }
+
 }
 
 /* Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif */
@@ -379,6 +414,11 @@ input {
         max-width: 60px;
     }
 
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 75px;
+    }
+
     .margin-top-adj {
         margin-top: -10px;
     }
@@ -401,7 +441,7 @@ input {
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
-        font-size: 1rem;  
+        font-size: 1.1rem;  
         color: black;
         padding: 35px 0 2px;
         background: transparent;
@@ -470,7 +510,22 @@ input {
         background: transparent;
         border: 0;
         border-bottom: 1px solid #807f7f;
-    }    
+    }
+
+    #center.forgot_password {
+        font-size: 18px;
+        margin-left: 31%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -25px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 15px;
+        font-size: 1.3rem;
+    }
 
 }
 
@@ -500,6 +555,11 @@ input {
         display: block;
         margin: 85px auto 0 auto;
         max-width: 55px;
+    }
+
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 70px;
     }
 
     .margin-top-adj {
@@ -545,7 +605,7 @@ input {
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
-        font-size: 1rem;  
+        font-size: 1.1rem;  
         color: black;
         padding: 35px 0 2px;
         background: transparent;
@@ -616,6 +676,21 @@ input {
         border-bottom: 1px solid #807f7f;
     }
 
+    #center.forgot_password {
+        font-size: 17px;
+        margin-left: 29%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -30px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
 }
 
 /* ip 5/SE */
@@ -675,6 +750,11 @@ input {
         display: block;
         margin: 85px auto 0 auto;
         max-width: 55px;
+    }
+
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 66px;
     }
 
     .margin-top-adj {
@@ -806,6 +886,21 @@ input {
         background: transparent;
         border: 0;
         border-bottom: 1px solid #807f7f;
+    }
+
+    #center.forgot_password {
+        font-size: 17px;
+        margin-left: 27%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -25px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 15px;
+        font-size: 1.1rem;
     }
 
 }
