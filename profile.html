@@ -16,7 +16,7 @@
             <span class="profile-icon">
                 <ion-icon name="person-circle-outline"></ion-icon>
             </span>
-            <span class="profile-text">Hi, User</span>
+            <span id="welcome-text" class="profile-text">Loading...</span>
         </div>
         <br>
 
@@ -61,6 +61,12 @@
     <div class="footer">Copyright © 2021 Dumpling Grads • Made with sweat and tears</div>
 
     <!-- Navigation -->
+    <!-- Function -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <!-- external js files -->
+    <script src="scripts/config.js"></script>
     <script type="text/javascript">
         function toGeneral() {
             window.location.href = "accDetails.html";
@@ -90,6 +96,22 @@
             // TODO : need to check to navigate
             window.location.href = "mainPage.html";
         }
+        async function onload() {
+            var welc_text = document.getElementById("welcome-text");
+
+            const app = firebase.initializeApp(firebaseConfig);
+            const auth = app.auth();
+            const db = app.firestore();
+            var user_id = localStorage.getItem("UID");
+            await db.collection("users").doc(user_id.toString()).get().then((doc) => {
+                if (doc.exists) {
+                    welc_text.innerText = "Hi, " + doc.data().name;
+                }
+            })
+
+        }
+        onload();
+
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>

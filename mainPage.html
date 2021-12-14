@@ -82,7 +82,7 @@
             console.log(Date().toString());
             const parking_entry = {
                 "location": location_went,
-                "timestamp": Date().toString(),
+                "timestamp": Date(),
                 "uid": user_id,
                 "check-out": false
             }
@@ -102,22 +102,24 @@
                     console.log(doc.data().latest_park_id);
                     prev_entry_id = doc.data().latest_park_id;
                     //UPDATE THE VALUES ON THE USER'S LATEST_PARK_ID
-                    db.collection("users").doc(user_id.toString()).update(
-                        {
-                            latest_park_id: entry_id
-                        });
-                    
-                    //check out the previous entry for the user
-                    if (prev_entry_id != "") {
-                        console.log("i have prev entry!" + prev_entry_id);
-                        db.collection("parking-entries").doc(prev_entry_id).update(
-                            {
-                                "check-out": true
-                            });
-                    }
+
                 }
+            })
+            //UPDATE THE VALUES ON THE USER'S LATEST_PARK_ID
+            await db.collection("users").doc(user_id.toString()).update(
+                {
+                    latest_park_id: entry_id
+                });
+
+            //check out the previous entry for the user
+            if (prev_entry_id != undefined) {
+                console.log("i have prev entry!" + prev_entry_id);
+                await db.collection("parking-entries").doc(prev_entry_id).update(
+                    {
+                        "check-out": true
+                    });
             }
-            )
+
 
             window.location.href = "mainCheckOut.html";
 

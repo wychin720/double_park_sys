@@ -15,68 +15,96 @@
                 <ion-icon name="options-outline"></ion-icon>
             </span>
             <span class="header-text">Account</span>
-    </div>
+        </div>
 
-    <!-- Display Information -->
-    <div class="box">
-        <p>
-            <label>Name</label>
-            <span class="info">Mr Brown</span>
-        </p>
-        <p>
-            <label>Contact Number
-                <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-            </label>
-            <span class="info">012-345 6789</span>
-        </p>
-        <p>
-            <label>Email
-                <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-            </label>
-            <span class="info">luvbrown@gmail.com</span>
-        </p>
-        <p>
-            <label>Vehicle Plates
-                <ion-icon name="add-outline" style="font-size: 18px;"></ion-icon>
-            </label>
-            <span class="info">ABC1234</span>
-        </p>
-    </div>
+        <!-- Display Information -->
+        <div class="box">
+            <p>
+                <label>Name</label>
+                <span id="driver-name" class="info">Loading...</span>
+            </p>
+            <p>
+                <label>Contact Number
+                    <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
+                </label>
+                <span id="contact-number" class="info">Loading...</span>
+            </p>
+            <p>
+                <label>Email
+                    <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
+                </label>
+                <span id="email" class="info">Loading...</span>
+            </p>
+            <p>
+                <label>Vehicle Plates
+                    <ion-icon name="add-outline" style="font-size: 18px;"></ion-icon>
+                </label>
+                <span id="vehicle-plate" class="info">Loading...</span>
+            </p>
+        </div>
 
-    <!-- Button -->
-    <div style="text-align: center;">
-        <button type="button" class="submit_btn" onclick="toProfile()">
-            <ion-icon name="chevron-back"></ion-icon>
-        </button>
+        <!-- Button -->
+        <div style="text-align: center;">
+            <button type="button" class="submit_btn" onclick="toProfile()">
+                <ion-icon name="chevron-back"></ion-icon>
+            </button>
 
-        <button type="button" class="submit_btn" onclick="toSearch()">
-            <ion-icon name="search-outline"></ion-icon>
-        </button>
+            <button type="button" class="submit_btn" onclick="toSearch()">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
 
-        <button type="button" class="submit_btn" onclick="returnToHome()">
-            <ion-icon name="home-outline"></ion-icon>
-        </button>
-    </div>
+            <button type="button" class="submit_btn" onclick="returnToHome()">
+                <ion-icon name="home-outline"></ion-icon>
+            </button>
+        </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        Copyright © 2021 Dumpling Grads • Made with sweat and tears
-    </div>
-    <script>
-        // user click button to return back to home
-        function returnToHome() {
-            window.location.href = "index.html"
-        }
+        <!-- Footer -->
+        <div class="footer">
+            Copyright © 2021 Dumpling Grads • Made with sweat and tears
+        </div>
+        <!-- Function -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+        <!-- external js files -->
+        <script src="scripts/config.js"></script>
+        <script>
+            // user click button to return back to home
+            async function onload() {
+                var name_elem = document.getElementById("driver-name");
+                var contact_elem = document.getElementById("contact-number");
+                var email_elem = document.getElementById("email");
+                var veh_plate_elem = document.getElementById("vehicle-plate");
 
-        function toSearch() {
-            window.location.href = "checkVehicle.html"
-        }
+                const app = firebase.initializeApp(firebaseConfig);
+                const auth = app.auth();
+                const db = app.firestore();
+                var user_id = localStorage.getItem("UID");
+                await db.collection("users").doc(user_id.toString()).get().then((doc) => {
+                    if (doc.exists) {
+                        name_elem.innerText = doc.data().name;
+                        contact_elem.innerText =  doc.data().phone;
+                        email_elem.innerText = doc.data().email;
+                        veh_plate_elem.innerText = doc.data().plate;
+                    }
+                })
 
-        function toProfile() {
-            window.location.href = "profile.html"
-        }
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            }
+
+            function returnToHome() {
+                window.location.href = "index.html"
+            }
+
+            function toSearch() {
+                window.location.href = "checkVehicle.html"
+            }
+
+            function toProfile() {
+                window.location.href = "profile.html"
+            }
+            onload();
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
