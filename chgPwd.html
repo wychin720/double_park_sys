@@ -72,20 +72,31 @@
             window.location.href = "profile.html";
         }
 
-        function changePassword(){
+        async function changePassword(){
             const app = firebase.initializeApp(firebaseConfig);
             const auth = app.auth();
             const db = app.firestore();
 
-            const user = firebase.auth().currentUser;
-            const email = user.email
+            const user = auth.currentUser.uid;
+            
+            var user_id = sessionStorage.getItem("UID");
 
-            auth.sendPasswordResetEmail(email).then(function(){
+            //const docRef = await db.collection("users").doc(user.uid);
+            //const email = "dgoh0005@student.monash.edu"
+            //console.log(user.uid);
+            console.log(user_id);
+
+            //docRef.get().then(function(doc){
+                auth.sendPasswordResetEmail(email).then(function(){
                 window.alert("An email has been sent to you. Please check and verify it.")
-            })
+                
+            //})
             .catch(function(error){
                 window.alert("An error has occured.")
             })
+            })
+
+            
         }
 
     </script>
