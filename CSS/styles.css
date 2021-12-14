@@ -1,5 +1,6 @@
 
 
+
 /* General */
 
 body {
@@ -181,15 +182,6 @@ input {
     padding: 3px;
 }
 
-/* Pending */
-
-.CI-header {
-    margin-top: 50%;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
-}
-
 .CI-header-icon {
     color:#d00b0b; 
     font-size: 40px;
@@ -197,22 +189,6 @@ input {
     margin-right: -5px;
 }
 
-.CI-confirm-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 8px;
-    margin-left: -30px;
-    padding-right: 7px;
-    text-align: left;
-}
-
-.CI-confirm-icon {
-    color:#69df59; 
-    font-size: 25px; 
-    --ionicon-stroke-width: 40px;
-    padding-top: 5px;
-    margin-right: -20px;
-}
 
 /* ******************************************************************************************************************************************************** */
 
@@ -222,7 +198,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 17px;
+        font-size: 22px;
         margin-left: 20px;
     }
     
@@ -239,7 +215,7 @@ input {
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .input-bar {
@@ -366,7 +342,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 16px;
+        font-size: 20px;
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -378,7 +354,7 @@ input {
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .logo-picture {
