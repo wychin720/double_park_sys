@@ -1,6 +1,3 @@
-
-
-
 /* General */
 
 body {
@@ -341,17 +338,6 @@ input {
         border-bottom: 2px solid #807f7f;
     }
     
-    #link-size.forgot_password {
-        font-size: 13px;
-        margin-left: 59.2%;
-    }
-
-    #center.forgot_password {
-        font-size: 20px;
-        margin-top: 50px;
-        margin-left: 27%;
-    }
-    
 }
 
 /* Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif */
@@ -475,6 +461,18 @@ input {
         border: 0;
         border-bottom: 1px solid #807f7f;
     }
+    
+    #link-size.forgot_password {
+        font-size: 13px;
+        margin-left: 59.2%;
+    }
+
+    #center.forgot_password {
+        font-size: 20px;
+        margin-top: 50px;
+        margin-left: 27%;
+    }
+    
 
 }
 
