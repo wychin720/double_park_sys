@@ -191,13 +191,13 @@ input {
     background: transparent;
     color: blue;
     text-decoration: underline;
-    margin-top: -8px;
+    margin-top: -5px;
     margin-left: 62.9%;
 }
 
 #link-size.forgot_password {
     font-size: 13px;
-    margin-left: 58%;
+    margin-left: 54%;
 }
 
 #center.forgot_password {
