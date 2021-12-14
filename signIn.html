@@ -20,26 +20,28 @@
 
         <div class="box">
             <!-- Input -->
-            <form>
-                <p>
-                <label for="email">Email*</label>
-                <input type="text" id="email" name="email" placeholder="JohnDoe@gmail.com"
-                    required>
+            <form style="width: 100%;">
+                <p class="form__group field">
+                    <input type="text" class="form__field" id="email" name="email" placeholder="Email" required />
+                    <label for="email" class="form__label">Email</label>
                 </p>
-                
-                <p>
-                <label for="password">Password*</label>
-                <input type="password" id="password" name="password" placeholder="********"
-                    required>
+
+                <p class="form__group field">
+                    <input type="password" class="form__field" id="password" name="password" placeholder="Password" required />
+                    <label for="password" class="form__label">Password</label>
                 </p>
-    
-            </form>
         </div>
 
         <!-- Button -->
         <div>
             <button type="button" class="submit_btn" style="display: block;" onclick="signIn()">
                 Sign In
+            </button>
+        </div>
+ 
+        <div>
+            <button type="button" class="forgot_password" id="center" onclick="forgotPassword()">
+                Forgot Password?
             </button>
         </div>
 
@@ -55,6 +57,10 @@
         <script src="scripts/config.js"></script>
         <!-- Function -->
         <script>
+            function forgotPassword(){
+                window.location.href = "forgotPassword.html";
+            }
+
             function checkTextField() {
                 var emailElem = document.getElementById("email");
                 var pwdElem = document.getElementById("password");

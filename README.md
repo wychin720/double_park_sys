@@ -7,17 +7,19 @@ Round 1 Video - [Idea Pitch](https://youtu.be/RfE3DayPM4U)
 
 Round 2 Video - [MVP](https://youtu.be/7qYWFXDlBHQ)
 
-## About the prototype
-This web application prototype is created using HTML, CSS, JavaScript and several other JavaScript and CSS libraries. We have partially integrated Firebase as a backend into our system. When we get to Round 3, we further complete the integration of this database system into our web application.
+Round 3 Live Pitch with Judges
 
-For this Round 2, some user details are hardcoded in. The MVP is currently in a state of navigability where you can freely navigate the web application but don’t have much concrete functionality and we will improve it further in Round 3. The purpose of the current prototype is to demonstrate the features that were pitched during hte first round.
+## About the web application
+This web application is created using HTML, CSS, JavaScript and several other JavaScript and CSS libraries. We have also implemented Firebase as a backend into our system. 
+
+Compared to the prototype in Round 2, this web application is our final complete product that we are proud to present!
 
 ## How To Use
 First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link and you will be greeted with the following page:
 
 ![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
 
-If you want to "Search a Vehicle", you will see the following to enter a vehicle plate (IMPORTANT NOTE: You can only enter the vehicle plate "VBR4100" as this is the only value that can be found in the Firebase database we have partially implemented - only for this Round 2):
+If you want to "Search a Vehicle", you will see the following to enter a vehicle plate. We have some pre-set number plates that you may try; VBR4100, .... (ADD ALL AVAILABLE NUMBER PLATES HERE). Additionally you may Sign Up and key in your own details and number plate to try and view it.
 
 ![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
 
@@ -35,9 +37,6 @@ Lastly, each user that signs up will have a profile as follows:
 
 That concludes the quick summary, do refer to the Round 2 video [here](https://youtu.be/7qYWFXDlBHQ) where we demo further the flow between each page!
 
-
-## Further Implementation for Round 3
-As mentioned previously, we would fully integrate Firebase as a backend for the entire web application. Aside from that, we will try to make changes to the theme and look of the UI so that it looks more modern and appealing to users. 
 
 ## Authors
 **Daniel Goh U-Sheng**     

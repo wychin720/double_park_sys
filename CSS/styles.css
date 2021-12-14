@@ -4,11 +4,11 @@
 body {
     background: white;
     color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
     font-size: 14px;
     letter-spacing: 2px;
     position:relative;
-    min-height: 100vh;
+    min-height: 110vh;
 }
 
 form { 
@@ -19,7 +19,7 @@ input {
     width: 100%;
     display: block;
     margin-left: 20px;
-    padding: 3px;
+    padding: 5px;
 }
 
 .big-header-icon {
@@ -65,7 +65,7 @@ input {
 .box {
     background-color: #f0f0f0;
     width: 80%;
-    padding: 10px 30px 10px 0;
+    padding: 13px 30px 13px 0;
     margin: auto;
     overflow: auto;
     border-radius: 10px;
@@ -106,7 +106,7 @@ input {
     width: 70%;
     display: block;
     margin: 20px auto 0 auto;
-    padding: 6px;
+    padding: 8px;
 }
 
 #long-btn-text {
@@ -154,7 +154,7 @@ input {
     background-color: #8561e6;
     color: white;
     margin: 25px auto 0 auto;
-    font-size: 20px;
+    font-size: 22px;
     /* padding: 5px 15px; */
     padding: 5px 20px;
     border: none;
@@ -178,15 +178,6 @@ input {
     width: 50px;
     margin-left: 20px;
     padding: 3px;
-}
-
-/* Pending */
-
-.CI-header {
-    margin-top: 50%;
-    text-align: center;
-    font-size: 17px;
-    font-weight: bold;
 }
 
 .CI-header-icon {
@@ -213,6 +204,23 @@ input {
     margin-right: -20px;
 }
 
+.forgot_password {
+    border: none;
+    background: transparent;
+    color: blue;
+    text-decoration: underline;
+    /* margin-top: -10px; */
+    margin-top: 50px;
+    margin-left: 62.9%;
+}
+
+/* #link-size.forgot_password {
+    font-size: 13px;
+    margin-left: 59.2%;
+} */
+
+
+
 /* ******************************************************************************************************************************************************** */
 
 /* ipX + pixel 2 XL */
@@ -221,7 +229,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 17px;
+        font-size: 22px;
         margin-left: 20px;
     }
     
@@ -234,11 +242,11 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .input-bar {
@@ -253,6 +261,11 @@ input {
         margin: 50% auto 0 auto;
         max-width: 75px;
     }
+
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 85px;
+    }
     
     .margin-top-adj {
         margin-top: 100px;
@@ -262,16 +275,117 @@ input {
         text-align: center;
         margin-top: 27%;
         margin-bottom: -10px;
-        font-size: 55px;
+        font-size: 60px;
     }
     
     #long-btn-text {
         font-size: 17px;
         margin-left: 10px;
     }
+
     
+    /* SignIn + SignUp Form Input */
+    .form__group {
+        position: relative;
+        padding: 15px 0 0;
+        margin-top: 10px;
+    }
+
+    .form__field {
+        width: 93%;
+        border: 0;
+        border-bottom: 2px solid #807f7f;
+        outline: 0;
+        font-size: 1.3rem;
+        color: black;
+        padding: 8px 0 4px;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+
+    .form__field:placeholder-shown ~ .form__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1.irem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+
+    .form__field:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .form__field:required, 
+    .form__field:invalid {
+        box-shadow: none;
+    }
+
+    /* Driver Contact Input */
+    #driver-label {
+        margin-top: 15px;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+
+    #driver-select {
+        display: inline-block;
+        width: 55px;
+        margin-left: 20px;
+        padding: 3px;
+        font-size: 1.3rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid #807f7f;
+    }
+
+    #driver_name {
+        width: 72%;
+        margin-left: -2px;
+        padding: auto;
+        font-size: 1.3rem;  
+        color: black;
+        outline: 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid #807f7f;
+    }
+
+    #center.forgot_password {
+        font-size: 20px;
+        margin-left: 26%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: 3px;
+    }
+
+    #label-size.reset-email {
+        margin-top: -15px;
+        font-size: 1.3rem;
+    }
+
 }
 
+/* Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif */
 
 /* pixel 2 + ip 6/7/8 (plus) */
 @media only screen and (min-width: 375px) and (max-height:800px) { 
@@ -279,7 +393,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 14px;
+        font-size: 20px;
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -287,11 +401,11 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .logo-picture {
@@ -300,15 +414,117 @@ input {
         max-width: 60px;
     }
 
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 75px;
+    }
+
     .margin-top-adj {
         margin-top: -10px;
     }
 
     .only-icon {
         text-align: center;
-        margin-top: 15%;
+        margin-top: 30px;
         margin-bottom: -10px;
-        font-size: 53px;
+        font-size: 55px;
+    }
+
+    /* SignIn + SignUp Form Input */
+    .form__group {
+        position: relative;
+        margin-top: -7px;
+    }
+    
+    .form__field {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+        outline: 0;
+        font-size: 1.1rem;  
+        color: black;
+        padding: 35px 0 2px;
+        background: transparent;
+    }
+    
+    .form__field::placeholder {
+        color: transparent;
+    }
+    
+    .form__field:placeholder-shown ~ .form__label {
+        font-size: 1.1rem;
+        cursor: text;
+        top: 20px;
+    }
+    
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+    
+    .form__field:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .form__field:required, 
+    .form__field:invalid {
+        box-shadow: none;
+    }
+
+    /* Driver Contact Input */
+    #driver-label {
+        margin-top: 25px;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+
+    #driver-select {
+        display: inline-block;
+        width: 55px;
+        margin-left: 20px;
+        padding: 3px;
+        font-size: 1rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #driver_name {
+        width: 71%;
+        margin-left: -2px;
+        padding: auto;
+        font-size: 1rem;  
+        color: black;
+        outline: 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #center.forgot_password {
+        font-size: 18px;
+        margin-left: 31%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -25px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 15px;
+        font-size: 1.3rem;
     }
 
 }
@@ -328,7 +544,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
@@ -339,6 +555,11 @@ input {
         display: block;
         margin: 85px auto 0 auto;
         max-width: 55px;
+    }
+
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 70px;
     }
 
     .margin-top-adj {
@@ -365,18 +586,109 @@ input {
         background-color: #8561e6;
         color: white;
         margin: 25px auto 0 auto;
-        font-size: 16px;
+        font-size: 20px;
         padding: 5px 20px;
         border: none;
         border-radius: 40px;
         transition-duration: 1s;
     }  
+
+
+    /* SignIn + SignUp Form Input */
+    .form__group {
+        position: relative;
+        margin-top: -10px;
+    }
     
-    #driver_name {
+    .form__field {
+        width: 95%;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+        outline: 0;
+        font-size: 1.1rem;  
+        color: black;
+        padding: 35px 0 2px;
+        background: transparent;
+    }
+    
+    .form__field::placeholder {
+        color: transparent;
+    }
+    
+    .form__field:placeholder-shown ~ .form__label {
+        font-size: 1.1rem;
+        cursor: text;
+        top: 20px;
+    }
+    
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+    
+    .form__field:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .form__field:required, 
+    .form__field:invalid {
+        box-shadow: none;
+    }
+
+    /* Driver Contact Input */
+    #driver-label {
+        margin-top: 16px;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+
+    #driver-select {
         display: inline-block;
-        width: 71%;
-        margin-left: -3px;
-        padding: 3px
+        width: 55px;
+        margin-left: 20px;
+        padding: 3px;
+        font-size: 1rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #driver_name {
+        width: 68%;
+        margin-left: -2px;
+        padding: auto;
+        font-size: 1rem;  
+        color: black;
+        outline: 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #center.forgot_password {
+        font-size: 17px;
+        margin-left: 29%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -30px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 20px;
+        font-size: 1.2rem;
     }
 
 }
@@ -407,7 +719,6 @@ input {
     .box {
         background-color: #f0f0f0;
         width: 80%;
-        padding: 3px 25px 0 0;
         margin: auto;
         overflow: auto;
         border-radius: 10px;
@@ -428,7 +739,7 @@ input {
     .info {
         display: flex;
         color: #181b6b;
-        font-family: Lucida Sans;
+        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
@@ -441,13 +752,18 @@ input {
         max-width: 55px;
     }
 
+    #changePwd.logo-picture {
+        margin: 50% auto 5% auto;
+        max-width: 66px;
+    }
+
     .margin-top-adj {
         margin-top: 25px;
     }
     
     .only-icon {
         text-align: center;
-        margin-top: 8%;
+        margin-top: 10%;
         margin-bottom: -10px;
         font-size: 45px;
     }
@@ -465,15 +781,14 @@ input {
         background-color: #8561e6;
         color: white;
         margin: 25px auto 0 auto;
-        font-size: 15px;
+        font-size: 18px;
         padding: 5px 20px;
         border: none;
         border-radius: 40px;
         transition-duration: 1s;
     }
 
-    #time-select,
-    #driver-select {
+    #time-select {
         display: inline-block;
         width: 50px;
         margin-left: 20px;
@@ -491,4 +806,101 @@ input {
         font-size: 43px;
     } 
     
+    /* input bar */
+    .form__group {
+        position: relative;
+        margin-top: -12px;
+    }
+    
+    .form__field {
+        width: 95%;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+        outline: 0;
+        font-size: 1rem;  
+        color: black;
+        padding: 30px 0 2px;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+
+    .form__field::placeholder {
+        color: transparent;
+    }
+    
+    .form__field:placeholder-shown ~ .form__label {
+        font-size: 1.1rem;
+        cursor: text;
+        top: 20px;
+    }
+    
+    .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: #807f7f;
+    }
+    
+    .form__field:focus ~ .form__label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .form__field:required, 
+    .form__field:invalid {
+        box-shadow: none;
+    }
+
+    /* Driver Contact Input */
+    #driver-label {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+    }
+
+    #driver-select {
+        display: inline-block;
+        width: 54px;
+        margin-left: 20px;
+        padding: 3px;
+        font-size: 1rem;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #driver_name {
+        width: 67.9%;
+        margin-left: -2px;
+        padding: auto;
+        font-size: 1rem;  
+        color: black;
+        outline: 0;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #807f7f;
+    }
+
+    #center.forgot_password {
+        font-size: 17px;
+        margin-left: 27%;
+    }
+
+    .reset-email {
+        color: #6b6a6a; 
+        margin-bottom: -25px;
+    }
+
+    #label-size.reset-email {
+        margin-top: 15px;
+        font-size: 1.1rem;
+    }
+
 }

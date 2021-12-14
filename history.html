@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <title>Double Parking Notification System</title>
+    <style>
+        .collapsible {
+            background-color: rgb(202, 202, 202);
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .active,
+        .collapsible:hover {
+            background-color: rgb(160, 159, 159);
+        }
+
+        .collapsible:after {
+            content: '\02C5';
+            /* Unicode character for up arrow */
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\02C4";
+            /* Unicode character for down arrow */
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,55 +55,160 @@
                 <ion-icon name="newspaper-outline" style="font-size: 45px;"></ion-icon>
             </span>
             <span class="header-text">History</span>
-    </div>
+        </div>
 
-    <!-- Display Information -->
-    <div class="box">
-        <p>
-            <label style="font-size: 25px;">2019</label>
-            <span class="info">25 Dec 2019 (Tues) : KFC</span>
-        </p><br>
+        <!-- Display Information , inject element holding data here -->
+        <div class="box" id="outer_box">
+            <span for="year">Filter by:</span>
+            <select name="year" id="year" onchange="refreshCollapsible()">
+                <option></option>
+            </select>
+            <p></p>
+            <div id="his_table"></div>
+        </div>
 
-        <p>
-            <label style="font-size: 25px;">2020</label>
-            <span class="info">29 Jan 2020 (Thurs) : Starbucks</span>
-        </p>
-    </div>
+        <!-- Button -->
+        <div style="text-align: center;">
+            <button type="button" class="submit_btn" onclick="toProfile()">
+                <ion-icon name="chevron-back"></ion-icon>
+            </button>
 
-    <!-- Button -->
-    <div style="text-align: center;">
-        <button type="button" class="submit_btn" onclick="toProfile()">
-            <ion-icon name="chevron-back"></ion-icon>
-        </button>
+            <button type="button" class="submit_btn" onclick="toSearch()">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
 
-        <button type="button" class="submit_btn" onclick="toSearch()">
-            <ion-icon name="search-outline"></ion-icon>
-        </button>
+            <button type="button" class="submit_btn" onclick="returnToHome()">
+                <ion-icon name="home-outline"></ion-icon>
+            </button>
+        </div>
 
-        <button type="button" class="submit_btn" onclick="returnToHome()">
-            <ion-icon name="home-outline"></ion-icon>
-        </button>
-    </div>
+        <!-- Footer -->
+        <div class="footer">
+            Copyright © 2021 Dumpling Grads • Made with sweat and tears
+        </div>
+        <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+        <!-- external js files -->
+        <script src="scripts/config.js"></script>
+        <script>
+            // feed in history entries
+            var data = [];
+            load().then(() => {
+                toggle();
+            })
 
-    <!-- Footer -->
-    <div class="footer">
-        Copyright © 2021 Dumpling Grads • Made with sweat and tears
-    </div>
-    <script>
-        // user click button to return back to home
-        function returnToHome() {
-            window.location.href = "mainPage.html"
-        }
+            function toggle() {
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
 
-        function toSearch() {
-            window.location.href = "checkVehicle.html"
-        }
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight) {
+                            content.style.maxHeight = null;
+                        } else {
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                }
+            }
+            function refreshCollapsible() {
+                // clear all entries
+                const toInject = document.getElementById("his_table");
+                toInject.innerHTML = "";
+                const filterYear = document.getElementById("year").value;
+                //console.log(filterYear);
+                // add in entries after refresh
+                for (let i = 0; i < data.length; i++) {
+                    var date = new Date(data[i].timestamp);
+                    if (date.getFullYear() == filterYear) {
+                        injectCollapsible(data[i]);
+                    }
+                }
 
-        function toProfile() {
-            window.location.href = "profile.html"
-        }
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                toggle();
+            }
+
+            async function load() {
+                //const uid = localStorage.getItem("UID");
+                //const uid = "Lv4nVURG61gGvpK56dnAyXMDfUn1"; // to see no history found
+                const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
+                const app = firebase.initializeApp(firebaseConfig);
+                const db = app.firestore();
+                const entries = await db.collection("parking-entries").orderBy("timestamp", "asc").get();
+
+                var years = [];
+                entries.forEach((doc) => {
+                    if (doc.data().uid == uid) {
+                        data.push(doc.data());
+                        years.push(new Date(doc.data().timestamp).getFullYear());
+                    }
+                });
+                //console.log(data);
+                //console.log(years);
+                const unique_years = years.filter((x, i, a) => a.indexOf(x) == i);
+                //console.log(unique_years);
+                if (unique_years.length > 0) {
+                    for (let i = 0; i < unique_years.length; i++) {
+                        injectYearOpt(unique_years[i]);
+                    }
+                    for (let i = 0; i < data.length; i++) {
+                        injectCollapsible(data[i]);
+                    }
+                }
+                else{
+                    const toInject = document.getElementById("his_table");
+                    toInject.innerHTML = "<p><a class='info'>No history found.</a></p>";
+                }
+            }
+            function injectYearOpt(year) {
+                const toInject = document.getElementById("year");
+                const option = document.createElement("option");
+                option.value = year;
+                option.innerText = year;
+
+                toInject.appendChild(option);
+            }
+            function injectCollapsible(data) {
+                //console.log(data);
+                const toInject = document.getElementById("his_table");
+                const button = document.createElement("button");
+                button.setAttribute("class", "collapsible");
+                var date = new Date(data.timestamp);
+                //console.log(date.toUTCString());
+                button.innerText = date.toUTCString();
+                const content_div = document.createElement("div");
+                content_div.setAttribute("class", "content");
+                const content_p = document.createElement("p");
+                const content_label = document.createElement("label");
+                const content_span = document.createElement("span");
+                content_span.setAttribute("class", "info");
+                content_label.innerText = "Location";
+                content_span.innerText = data.location;
+
+                content_p.appendChild(content_label);
+                content_p.appendChild(content_span);
+                content_div.appendChild(content_p);
+                toInject.appendChild(button);
+                toInject.appendChild(content_div);
+            }
+            // user click button to return back to home
+            function returnToHome() {
+                window.location.href = "mainPage.html"
+            }
+
+            function toSearch() {
+                window.location.href = "checkVehicle.html"
+            }
+
+            function toProfile() {
+                window.location.href = "profile.html"
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
 
 </html>
