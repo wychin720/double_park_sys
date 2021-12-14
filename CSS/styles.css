@@ -1,4 +1,5 @@
 
+
 /* General */
 
 body {
@@ -548,7 +549,7 @@ input {
     }
     
     .form__field {
-        width: 90%;
+        width: 95%;
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
@@ -740,7 +741,7 @@ input {
     }
     
     .form__field {
-        width: auto;
+        width: 95%;
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
@@ -750,7 +751,7 @@ input {
         background: transparent;
         transition: border-color 0.2s;
     }
-    
+
     .form__field::placeholder {
         color: transparent;
     }
@@ -804,7 +805,7 @@ input {
     }
 
     #driver_name {
-        width: 58%;
+        width: 67.9%;
         margin-left: -2px;
         padding: auto;
         font-size: 1rem;  
