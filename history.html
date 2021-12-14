@@ -120,13 +120,11 @@
                 const toInject = document.getElementById("his_table");
                 toInject.innerHTML = "";
                 const filterYear = document.getElementById("year").value;
-                console.log(filterYear);
+                //console.log(filterYear);
                 // add in entries after refresh
                 for (let i = 0; i < data.length; i++) {
                     var date = new Date(data[i].timestamp);
-                    console.log(date.getFullYear());
                     if (date.getFullYear() == filterYear) {
-                        console.log("hi");
                         injectCollapsible(data[i]);
                     }
                 }
