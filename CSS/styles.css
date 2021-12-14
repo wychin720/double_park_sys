@@ -195,6 +195,16 @@ input {
     margin-left: 62.9%;
 }
 
+#link-size.forgot_password {
+        font-size: 13px;
+        margin-left: 59.2%;
+}
+
+#center.forgot_password {
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 27%;
+}
 
 /* ******************************************************************************************************************************************************** */
 
@@ -796,17 +806,6 @@ input {
         background: transparent;
         border: 0;
         border-bottom: 1px solid #807f7f;
-    }
-    
-    #link-size.forgot_password {
-        font-size: 13px;
-        margin-left: 59.2%;
-    }
-
-    #center.forgot_password {
-        font-size: 20px;
-        margin-top: 50px;
-        margin-left: 27%;
     }
 
 }
