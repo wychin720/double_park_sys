@@ -171,13 +171,6 @@ input {
     background: #3f1e99;
 }
 
-/* #time-select,
-#driver-select {
-    display: inline-block;
-    width: 50px;
-    margin-left: 20px;
-    padding: 3px;
-} */
 
 .CI-header-icon {
     color:#d00b0b; 
@@ -208,17 +201,47 @@ input {
     background: transparent;
     color: blue;
     text-decoration: underline;
-    /* margin-top: -10px; */
-    /* margin-top: 50px;
-    margin-left: 62.9%; */
 }
 
-/* #link-size.forgot_password {
-    font-size: 13px;
-    margin-left: 59.2%;
-} */
+/* dropdown bar - history.html */
+.collapsible {
+    background-color: rgb(202, 202, 202);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
 
+.active,
+.collapsible:hover {
+    background-color: rgb(160, 159, 159);
+}
 
+.collapsible:after {
+    content: '\02C5';
+    /* Unicode character for up arrow */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\02C4";
+    /* Unicode character for down arrow */
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
 
 /* ******************************************************************************************************************************************************** */
 
@@ -903,12 +926,12 @@ input {
         transition-duration: 1s;
     }
 
-    #time-select {
+    /* #time-select {
         display: inline-block;
         width: 50px;
         margin-left: 20px;
         padding: 2px;
-    }
+    } */
     
     #driver_name {
         display: inline-block;
