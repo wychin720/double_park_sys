@@ -148,8 +148,8 @@
                         years.push(doc.data().timestamp.toDate().getFullYear());
                     }
                 });
-                console.log(data);
-                console.log(years);
+                //console.log(data);
+                //console.log(years);
                 const unique_years = years.filter((x, i, a) => a.indexOf(x) == i);
                 //console.log(unique_years);
                 if (unique_years.length > 0) {
