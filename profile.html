@@ -68,6 +68,10 @@
     <!-- external js files -->
     <script src="scripts/config.js"></script>
     <script type="text/javascript">
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = app.auth();
+        const db = app.firestore();
+
         function toGeneral() {
             window.location.href = "accDetails.html";
         }
@@ -85,6 +89,9 @@
             localStorage.clear();
             sessionStorage.clear();
 
+            //signout from firebase
+            auth.signOut();
+            
             // Redirect
             window.location.href = "index.html";
         }
@@ -99,9 +106,6 @@
         async function onload() {
             var welc_text = document.getElementById("welcome-text");
 
-            const app = firebase.initializeApp(firebaseConfig);
-            const auth = app.auth();
-            const db = app.firestore();
             var user_id = localStorage.getItem("UID");
             await db.collection("users").doc(user_id.toString()).get().then((doc) => {
                 if (doc.exists) {
