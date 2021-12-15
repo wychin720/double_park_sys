@@ -17,23 +17,23 @@ Compared to the prototype in Round 2, this web application is our final complete
 ## How To Use
 First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link and you will be greeted with the following page:
 
-![image](https://user-images.githubusercontent.com/69201759/145360344-dc2ec739-4010-47a5-a2ad-3bb449440325.png)
+![image](https://user-images.githubusercontent.com/69201759/146146110-43bd7bbe-6e00-40fa-9f60-8a23d828f26c.png)
 
 If you want to "Search a Vehicle", you will see the following to enter a vehicle plate. We have some pre-set number plates that you may try; VBR4100, .... (ADD ALL AVAILABLE NUMBER PLATES HERE). Additionally you may Sign Up and key in your own details and number plate to try and view it.
 
-![image](https://user-images.githubusercontent.com/69201759/145360609-4f47f672-c0ff-4f11-abfc-3403e1365c90.png)
+![image](https://user-images.githubusercontent.com/69201759/146146235-be387948-f371-42f0-a420-987db9a0899e.png)
 
 "Signing In" simply asks you to enter your email and password, to which you will then be brought to this page:
 
-![image](https://user-images.githubusercontent.com/69201759/145360463-db0bff43-fa48-4e2c-9c7f-91992c04277d.png)
+![image](https://user-images.githubusercontent.com/69201759/146146654-9c903ba3-65a0-4668-a272-dea27520956c.png)
 
 If you would like to "Sign Up":
 
-![image](https://user-images.githubusercontent.com/69201759/145360672-db6fa633-6089-49ad-aab3-94d930453d8b.png)
+![image](https://user-images.githubusercontent.com/69201759/146146706-e60f580b-453d-4077-b925-de6a44fcedac.png)
 
 Lastly, each user that signs up will have a profile as follows:
 
-![image](https://user-images.githubusercontent.com/69201759/145360722-fe7d7cbd-77cd-47f0-a9ba-025873d0e0b0.png)
+![image](https://user-images.githubusercontent.com/69201759/146146794-b5e63cfe-8131-47db-8843-fb67f529ade0.png)
 
 That concludes the quick summary, do refer to the Round 2 video [here](https://youtu.be/7qYWFXDlBHQ) where we demo further the flow between each page!
 
