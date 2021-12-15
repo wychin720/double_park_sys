@@ -1,4 +1,5 @@
 
+
 /* General */
 
 body {
@@ -370,7 +371,12 @@ input {
 
     #center.forgot_password {
         font-size: 20px;
-        margin-left: 26%;
+        margin: 60px auto 0 auto;
+    }
+
+    #link-size.forgot_password {
+        font-size: 16px;
+        margin: -10px -7px 0 auto;
     }
 
     .reset-email {
@@ -427,7 +433,7 @@ input {
         text-align: center;
         margin-top: 30px;
         margin-bottom: -10px;
-        font-size: 55px;
+        font-size: 60px;
     }
 
     /* SignIn + SignUp Form Input */
@@ -514,7 +520,12 @@ input {
 
     #center.forgot_password {
         font-size: 18px;
-        margin-left: 31%;
+        margin: 50px auto 0 auto;
+    }
+
+    #link-size.forgot_password {
+        font-size: 14px;
+        margin: -12px 5px 0 auto;
     }
 
     .reset-email {
@@ -678,7 +689,12 @@ input {
 
     #center.forgot_password {
         font-size: 17px;
-        margin-left: 29%;
+        margin: 50px auto 0 auto;
+    }
+
+    #link-size.forgot_password {
+        font-size: 14px;
+        margin: -12px -15px 0 auto;
     }
 
     .reset-email {
@@ -890,7 +906,12 @@ input {
 
     #center.forgot_password {
         font-size: 17px;
-        margin-left: 27%;
+        margin: 50px auto 0 auto;
+    }
+
+    #link-size.forgot_password {
+        font-size: 13px;
+        margin: -14px -15px 0 auto;
     }
 
     .reset-email {
@@ -902,5 +923,6 @@ input {
         margin-top: 15px;
         font-size: 1.1rem;
     }
+
 
 }
