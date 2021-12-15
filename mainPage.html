@@ -10,7 +10,7 @@
 <body>
     <div style="text-align: center; margin-top: 80px;">
         <!-- TODO : centre the text -->
-        <a class="profile-text">Hi, User</a><br>
+        <a id="welcome-text" class="profile-text">Loading...</a><br>
 
         <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
             <ion-icon name="search"></ion-icon>
@@ -84,7 +84,7 @@
                 "location": location_went,
                 "timestamp": new Date(),
                 "uid": user_id,
-                "check_out": false
+                "check-out": false
             }
             var entry_id = undefined;
             await db.collection("parking-entries").add(parking_entry).then((entry_doc_id) => {
@@ -133,6 +133,21 @@
         function toProfile() {
             window.location.href = "profile.html";
         }
+        async function onload() {
+            const app = firebase.initializeApp(firebaseConfig);
+            const auth = app.auth();
+            const db = app.firestore();
+            var welc_text = document.getElementById("welcome-text");
+
+            var user_id = localStorage.getItem("UID");
+            await db.collection("users").doc(user_id.toString()).get().then((doc) => {
+                if (doc.exists) {
+                    welc_text.innerText = "Hi, " + doc.data().name;
+                }
+            })
+
+        }
+        onload();
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
