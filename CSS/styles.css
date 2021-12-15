@@ -1,4 +1,3 @@
-
 /* General */
 
 body {
@@ -172,13 +171,13 @@ input {
     background: #3f1e99;
 }
 
-#time-select,
+/* #time-select,
 #driver-select {
     display: inline-block;
     width: 50px;
     margin-left: 20px;
     padding: 3px;
-}
+} */
 
 .CI-header-icon {
     color:#d00b0b; 
@@ -368,16 +367,18 @@ input {
         border-bottom: 2px solid #807f7f;
     }
 
+    /* forgot password - signIn.html */
     #center.forgot_password {
         font-size: 20px;
-        margin: 60px auto 0 auto;
+        margin: 75px auto 0 auto;
     }
 
     #link-size.forgot_password {
         font-size: 16px;
-        margin: -13px -7px 0 auto;
+        margin: -15px -7px 0 auto;
     }
 
+    /* forgotPassword.html */
     .reset-email {
         color: #6b6a6a; 
         margin-bottom: 3px;
@@ -388,9 +389,37 @@ input {
         font-size: 1.3rem;
     }
 
+    /* mainPage.html */
+    #location_went {
+        width: 95%;
+        padding: 6px;
+        margin-top: 5px;
+    }
+
+    #time_select {
+        display: inline-block;
+        width: 50px;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    /* history.html */
+    .hist_filter {
+        font-size: 17px;
+        margin-left: 110px;
+    }
+
+    #year {
+        font-size: 17px;
+    }
+
+    .table_max {
+        max-height:30rem; 
+    }
+
 }
 
-/* Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif */
 
 /* pixel 2 + ip 6/7/8 (plus) */
 @media only screen and (min-width: 375px) and (max-height:800px) { 
@@ -517,16 +546,18 @@ input {
         border-bottom: 1px solid #807f7f;
     }
 
+    /* forgot password - signIn.html */
     #center.forgot_password {
         font-size: 18px;
-        margin: 50px auto 0 auto;
+        margin: 65px auto 0 auto;
     }
 
     #link-size.forgot_password {
         font-size: 14px;
-        margin: -12px 5px 0 auto;
+        margin: -14px 5px 0 auto;
     }
 
+    /* forgotPassword.html */
     .reset-email {
         color: #6b6a6a; 
         margin-bottom: -25px;
@@ -535,6 +566,35 @@ input {
     #label-size.reset-email {
         margin-top: 15px;
         font-size: 1.3rem;
+    }
+
+    /* mainPage.html */
+    #location_went {
+        width: 90%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    #time_select {
+        display: inline-block;
+        width: 50px;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    /* history.html */
+    .hist_filter {
+        font-size: 15px;
+        margin-left: 129px;
+    }
+
+    #year {
+        font-size: 15px;
+    }
+
+    .table_max {
+        max-height:25rem; 
     }
 
 }
@@ -546,7 +606,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 13px;
+        font-size: 14px;
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -686,16 +746,18 @@ input {
         border-bottom: 1px solid #807f7f;
     }
 
+    /* forgot password - signIn.html */
     #center.forgot_password {
         font-size: 17px;
-        margin: 50px auto 0 auto;
+        margin: 65px auto 0 auto;
     }
 
     #link-size.forgot_password {
         font-size: 14px;
-        margin: -12px -15px 0 auto;
+        margin: -13px -15px 0 auto;
     }
 
+    /* forgotPassword.html */
     .reset-email {
         color: #6b6a6a; 
         margin-bottom: -30px;
@@ -706,6 +768,35 @@ input {
         font-size: 1.2rem;
     }
 
+    /* mainPage.html */
+    #location_went {
+        width: 90%;
+        padding: 4px;
+        margin-top: 5px;
+    }
+
+    #time_select {
+        display: inline-block;
+        width: 50px;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 4px;
+    }
+
+    /* history.html */
+    .hist_filter {
+        font-size: 11.5px;
+        margin-left: 140px;
+    }
+
+    #year {
+        font-size: 11.5px;
+    }
+
+    .table_max {
+        max-height:22rem; 
+    }
+
 }
 
 /* ip 5/SE */
@@ -714,7 +805,7 @@ input {
     label { 
         display: flex; 
         font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
         margin-left: 20px;
         margin-top: 10px;
     }
@@ -728,7 +819,16 @@ input {
 
     .big-header-icon {
         font-size: 30px;
-        margin-left: -15px;
+        margin-left: -20px;
+    }
+
+    .big-header-text {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 4px;
+        margin-left: 10px;
+        text-align: right; 
+        margin-right: -50px;
     }
 
     .box {
@@ -758,7 +858,7 @@ input {
         font-weight: 500;
         padding: 5px 0 7px 20px;
         text-align: left;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .logo-picture {
@@ -903,9 +1003,10 @@ input {
         border-bottom: 1px solid #807f7f;
     }
 
+    /* forgot password - signIn.html */
     #center.forgot_password {
         font-size: 17px;
-        margin: 50px auto 0 auto;
+        margin: 65px auto 0 auto;
     }
 
     #link-size.forgot_password {
@@ -913,6 +1014,7 @@ input {
         margin: -14px -15px 0 auto;
     }
 
+    /* forgotPassword.html */
     .reset-email {
         color: #6b6a6a; 
         margin-bottom: -25px;
@@ -923,5 +1025,32 @@ input {
         font-size: 1.1rem;
     }
 
+    /* mainPage.html */
+    #location_went {
+        width: 90%;
+        padding: 3px;
+        margin-top: 5px;
+    }
 
+    #time_select {
+        display: inline-block;
+        width: 50px;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 3px;
+    }
+
+    /* history.html */
+    .hist_filter {
+        font-size: 11.5px;
+        margin-left: 142px;
+    }
+
+    #year {
+        font-size: 11.5px;
+    }
+
+    .table_max {
+        max-height:22rem; 
+    }
 }
