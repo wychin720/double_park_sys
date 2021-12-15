@@ -17,7 +17,7 @@
     </div>
 
     <!-- Display Information -->
-    <div class="box">
+    <div class="box" id="display_box">
         <p>
             <label>Vehicle Plate</label>
             <span class="info" id="plate"></span>
@@ -27,10 +27,10 @@
             <span class="info" id="make"></span>
         </p>
 
-        <p>
+        <!-- <p>
             <label>Phone Number</label>
             <span class="info" id="contactNum"></span>
-        </p>
+        </p> -->
 
         <p>
             <label>Time Parked</label>
@@ -42,10 +42,10 @@
             <span class="info" id="loc"></span>
         </p>
 
-        <p>
+        <!-- <p>
             <label>Owner's Name</label>
             <span class="info" id="name"></span>
-        </p>
+        </p> -->
     </div>
 
     <!-- Button -->
@@ -66,14 +66,48 @@
 
     <!-- Function -->
     <script>
+        // to test whether how the local storage works 
+        if (localStorage.getItem("UID") == null) {
+            console.log("user not signed in.");
+        }
+        else {
+            console.log("user signed in.");
+            renderForSignedIn();
+        }
+
         // here will be run before the page is rendered
         document.getElementById("plate").innerText = sessionStorage.getItem("plateNo");
-        document.getElementById("contactNum").innerText = sessionStorage.getItem("phone");
-        document.getElementById("name").innerText = sessionStorage.getItem("name");
+        //document.getElementById("contactNum").innerText = sessionStorage.getItem("phone");
+        //document.getElementById("name").innerText = sessionStorage.getItem("name");
         document.getElementById("loc").innerText = sessionStorage.getItem("loc");
         document.getElementById("time").innerText = sessionStorage.getItem("time");
-        document.getElementById("make").innerText = sessionStorage.getItem("colour")+ " " +sessionStorage.getItem("brand");
+        document.getElementById("make").innerText = sessionStorage.getItem("colour") + " " + sessionStorage.getItem("brand");
 
+        function renderForSignedIn() {
+            const name_p = document.createElement("p");
+            const name_label = document.createElement("label");
+            const name_span = document.createElement("span");
+            name_span.setAttribute("class", "info");
+            name_span.setAttribute("id", "name");
+            name_label.innerText = "Owner's Name";
+            name_span.innerText = sessionStorage.getItem("name");
+            name_p.appendChild(name_label);
+            name_p.appendChild(name_span);
+
+            const phone_p = document.createElement("p");
+            const phone_label = document.createElement("label");
+            const phone_span = document.createElement("span");
+            phone_span.setAttribute("class","info");
+            phone_span.setAttribute("id","phone");
+            phone_label.innerText = "Phone Number";
+            phone_span.innerText = sessionStorage.getItem("phone");
+            phone_p.appendChild(phone_label);
+            phone_p.appendChild(phone_span);
+
+            const toInject = document.getElementById("display_box");
+            toInject.appendChild(name_p);
+            toInject.appendChild(phone_p);
+        }
         // get values from firebase based on vehicle plate and update
         function copyToClipboard() {
             var copyText = document.getElementById("contactNum");
