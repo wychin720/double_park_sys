@@ -84,7 +84,7 @@
                 "location": location_went,
                 "timestamp": new Date(),
                 "uid": user_id,
-                "check-out": false
+                "check_out": false
             }
             var entry_id = undefined;
             await db.collection("parking-entries").add(parking_entry).then((entry_doc_id) => {
