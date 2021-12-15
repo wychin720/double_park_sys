@@ -123,7 +123,7 @@
                 //console.log(filterYear);
                 // add in entries after refresh
                 for (let i = 0; i < data.length; i++) {
-                    var date = new Date(data[i].timestamp);
+                    var date = data[i].timestamp.toDate();
                     if (date.getFullYear() == filterYear) {
                         injectCollapsible(data[i]);
                     }
@@ -142,13 +142,14 @@
 
                 var years = [];
                 entries.forEach((doc) => {
-                    if (doc.data().uid == uid) {
+                    if (doc.data().uid == uid && doc.data().check_out == true) {
                         data.push(doc.data());
-                        years.push(new Date(doc.data().timestamp).getFullYear());
+                        // convert Timestamp to Date
+                        years.push(doc.data().timestamp.toDate().getFullYear());
                     }
                 });
-                //console.log(data);
-                //console.log(years);
+                console.log(data);
+                console.log(years);
                 const unique_years = years.filter((x, i, a) => a.indexOf(x) == i);
                 //console.log(unique_years);
                 if (unique_years.length > 0) {
@@ -177,7 +178,7 @@
                 const toInject = document.getElementById("his_table");
                 const button = document.createElement("button");
                 button.setAttribute("class", "collapsible");
-                var date = new Date(data.timestamp);
+                var date = data.timestamp.toDate();
                 //console.log(date.toUTCString());
                 button.innerText = date.toUTCString();
                 const content_div = document.createElement("div");
