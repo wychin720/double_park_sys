@@ -27,11 +27,6 @@
             <span class="info" id="make"></span>
         </p>
 
-        <!-- <p>
-            <label>Phone Number</label>
-            <span class="info" id="contactNum"></span>
-        </p> -->
-
         <p>
             <label>Time Parked</label>
             <span class="info" id="time"></span>
@@ -42,12 +37,9 @@
             <span class="info" id="loc"></span>
         </p>
 
-        <!-- <p>
-            <label>Owner's Name</label>
-            <span class="info" id="name"></span>
-        </p> -->
     </div>
-
+    <!-- For prompting to see more by sign in -->
+    <div id="forNoneUser" style="width: 80%; text-align: center;margin: auto;"></div>
     <!-- Button -->
     <div style="text-align: center;">
         <button type="button" class="submit_btn" onclick="">
@@ -63,12 +55,19 @@
     <div class="footer">
         Copyright © 2021 Dumpling Grads • Made with sweat and tears
     </div>
-
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <!-- external js files -->
+    <script src="scripts/config.js"></script>
     <!-- Function -->
     <script>
+        const uid = localStorage.getItem("UID");
         // to test whether how the local storage works 
-        if (localStorage.getItem("UID") == null) {
+        if (uid == null) {
             console.log("user not signed in.");
+            renderForNotSignedIn();
         }
         else {
             console.log("user signed in.");
@@ -82,6 +81,14 @@
         document.getElementById("loc").innerText = sessionStorage.getItem("loc");
         document.getElementById("time").innerText = sessionStorage.getItem("time");
         document.getElementById("make").innerText = sessionStorage.getItem("colour") + " " + sessionStorage.getItem("brand");
+
+        function renderForNotSignedIn() {
+            const toInject = document.getElementById("forNoneUser");
+            const message = document.createElement("p");
+            message.innerHTML = "Sign in/Sign up to view contact information for this vehicle <a href='index.html'>here</a>";
+
+            toInject.appendChild(message);
+        }
 
         function renderForSignedIn() {
             const name_p = document.createElement("p");
@@ -97,8 +104,8 @@
             const phone_p = document.createElement("p");
             const phone_label = document.createElement("label");
             const phone_span = document.createElement("span");
-            phone_span.setAttribute("class","info");
-            phone_span.setAttribute("id","phone");
+            phone_span.setAttribute("class", "info");
+            phone_span.setAttribute("id", "phone");
             phone_label.innerText = "Phone Number";
             phone_span.innerText = sessionStorage.getItem("phone");
             phone_p.appendChild(phone_label);
@@ -123,8 +130,28 @@
         }
 
         // user click button to return back to home
-        function returnToHome() {
-            window.location.href = "index.html"
+        async function returnToHome() {
+            if (uid == null) {
+                window.location.href = "index.html";
+            }
+            else {
+                const app = firebase.initializeApp(firebaseConfig);
+                const db = app.firestore();
+                const docRef = await db.collection("users").doc(uid);
+                docRef.get().then((doc) => {
+                    if (doc.exists && doc.data().latest_park_id != undefined) {
+                        console.log("exist unchecked out vehicle");
+                        // there is unchecked-out vehicle for this user
+                        window.location.href = "mainCheckOut.html";
+                    }
+                    else {
+                        console.log("document lost.");
+                    }
+                    // there is no unchecked-out vehicle
+                    console.log("able to check in.")
+                    window.location.href = "mainPage.html";
+                })
+            }
         }
 
     </script>
