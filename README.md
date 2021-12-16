@@ -21,7 +21,7 @@ The following will be a quick summary of key pages that we would like to highlig
 
 To try out "Searching a Vehicle", you will see the following to enter a vehicle plate. We have some pre-set number plates that you may try; DEF1234. Additionally, you may go to the "Sign Up" page and key in your own details and number plate, and try searching your detials after "Signing in" and "Checking in" your vehicle.
 
-![image](https://user-images.githubusercontent.com/69201759/146146235-be387948-f371-42f0-a420-987db9a0899e.png)
+![image](https://user-images.githubusercontent.com/69201759/146324359-b2a7dc8f-9e54-442b-8098-be02debcf247.png)
 
 "Signing In" simply asks you to enter your email and password, to which you will then be brought to this page:
 
