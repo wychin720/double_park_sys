@@ -149,7 +149,14 @@
                 await auth.currentUser.updateEmail(newEmail).then(() => {
                     alert("Email Updated: " + newEmail);
                 }).catch((error) => {
-                    alert(error);
+                    document.getElementById("cEmailBox").style.display = "none";
+                    document.getElementById("email").style.display = "flex";
+                    if (error.code=="auth/requires-recent-login"){
+                        alert("The email already exist");
+                    }
+                    else{
+                        alert(error.code); 
+                    }
                     changedEmailFlag = true;
                 });
 
@@ -168,16 +175,19 @@
             function showEditNum() {
                 document.getElementById("cNumberBox").style.display = "flex";
                 document.getElementById("contact-number").style.display = "none";
+                document.getElementById("chgNumber").value = document.getElementById("contact-number").innerText;
             }
 
             function showEditEmail() {
                 document.getElementById("cEmailBox").style.display = "flex";
                 document.getElementById("email").style.display = "none";
+                document.getElementById("chgEmail").value = document.getElementById("email").innerText;
             }
 
             function showEditPlate() {
                 document.getElementById("cPlateBox").style.display = "flex";
                 document.getElementById("vehicle-plate").style.display = "none";
+                document.getElementById("chgPlate").value = document.getElementById("vehicle-plate").innerText;
             }
 
             async function editContactNum() {
