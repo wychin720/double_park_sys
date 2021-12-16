@@ -88,10 +88,15 @@
                 //UserCredential: { additionalUserInfo?: AdditionalUserInfo | null; credential: AuthCredential | null; operationType?: string | null; user: User | null }
                 await auth.signInWithEmailAndPassword(emailVal, pwdVal).
                     then(function (firebaseUser) {
-                        console.log("UID is " + firebaseUser.user._delegate.uid);
-                        var uid = firebaseUser.user._delegate.uid
-                        //store details in session storage
-                        localStorage.setItem("UID", firebaseUser.user._delegate.uid);
+                        if (auth.currentUser.emailVerified == true) {
+                            console.log("UID is " + firebaseUser.user._delegate.uid);
+                            var uid = firebaseUser.user._delegate.uid
+                            //store details in session storage
+                            localStorage.setItem("UID", firebaseUser.user._delegate.uid);
+                        } else {
+                            auth.signOut();
+                            throw "Email not verfied";
+                        }
                     }).
                     catch(function (error) {
                         // Handle Errors here.
@@ -101,11 +106,11 @@
                             alert('Wrong password.');
                         }
 
-                        else if (errorCode === 'auth/user-not-found' || errorCode === 'auth/invalid-email') {
-                            alert('Email entered is incorrect');
+                        else if (errorCode === 'auth/user-not-found') {
+                            alert('Email entered is not registered.');
                         }
                         else if (errorCode === 'auth/invalid-email') {
-                            alert('Please enter a valid email');
+                            alert('Please enter a valid email.');
                         }
                         else {
                             alert(error);
@@ -119,10 +124,10 @@
                         if (doc.exists) {
                             console.log("user data")
                             console.log(doc.data().latest_park_id);
-                            if (doc.data().latest_park_id !=""){ //if theres a entry
+                            if (doc.data().latest_park_id != "") { //if theres a entry
                                 window.location.href = "mainCheckOut.html";
                             }
-                            else{
+                            else {
                                 window.location.href = "mainPage.html";
                             }
 

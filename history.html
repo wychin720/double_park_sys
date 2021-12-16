@@ -96,9 +96,9 @@
         }
 
         async function load() {
-            //const uid = localStorage.getItem("UID");
+            const uid = localStorage.getItem("UID");
             //const uid = "Lv4nVURG61gGvpK56dnAyXMDfUn1"; // to see no history found
-            const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
+           // const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
             const app = firebase.initializeApp(firebaseConfig);
             const db = app.firestore();
             const entries = await db.collection("parking-entries").orderBy("timestamp", "asc").get();

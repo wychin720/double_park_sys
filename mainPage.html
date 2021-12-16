@@ -42,10 +42,10 @@
             <p>
                 <label for="time_est" style="padding-right: 30px; padding-top: 4px;">Estimated Time Taken:</label>
                 <select id="time_select" style="width: 100px;">
-                    <option value="5 mins">5 mins</option>
-                    <option value="10 mins">10 mins</option>
-                    <option value="15 mins">15 mins</option>
-                    <option value="20 mins">20 mins</option>
+                    <option value="5">5 mins</option>
+                    <option value="10">10 mins</option>
+                    <option value="15">15 mins</option>
+                    <option value="20">20 mins</option>
                 </select>
             </p>
         </form>
@@ -78,13 +78,14 @@
             const db = app.firestore();
             var user_id = localStorage.getItem("UID");
             var location_went = document.getElementById("location_went").value;
-            var duration = document.getElementById("time-select").value;
+            var duration = document.getElementById("time_select").value;
             console.log(Date().toString());
             const parking_entry = {
                 "location": location_went,
                 "timestamp": new Date(),
                 "uid": user_id,
-                "check-out": false
+                "check_out": false,
+                "duration": parseInt(duration)
             }
             var entry_id = undefined;
             await db.collection("parking-entries").add(parking_entry).then((entry_doc_id) => {
@@ -112,11 +113,11 @@
                 });
 
             //check out the previous entry for the user
-            if (prev_entry_id != undefined) {
+            if (prev_entry_id != undefined && prev_entry_id != entry_id) {
                 console.log("i have prev entry!" + prev_entry_id);
                 await db.collection("parking-entries").doc(prev_entry_id).update(
                     {
-                        "check-out": true
+                        "check_out": true
                     });
             }
 

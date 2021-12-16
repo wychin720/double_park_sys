@@ -75,7 +75,7 @@
             //UPDATE THE check out attribute to false
             await db.collection("parking-entries").doc(parking_entry_id).update(
                 {
-                    "check-out": true,
+                    "check_out": true,
                     "check_out_ts": new Date()
                 });
 

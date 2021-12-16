@@ -13,6 +13,8 @@
         "location": "parking location",
         "timestamp": "parking timestamp",
         "uid": "user id in users collection",
-        "check-out": "boolean"
+        "check-out": "boolean",
+        "check_out_ts": "check-out timestamp",
+        "duration": "integer indicating minutes"
     }]
 }

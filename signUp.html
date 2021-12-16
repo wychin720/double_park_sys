@@ -155,6 +155,9 @@
                     else if (err.code == "auth/invalid-email") {
                         alert("Invalid email, try again");
                     }
+                    else if (err.code == "auth/weak-password") {
+                        alert("Password must be more than 6 chracters.");
+                    }
                     else {
                         console.log(err);
                         alert("Register fail, try again");
