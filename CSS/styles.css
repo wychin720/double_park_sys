@@ -417,6 +417,7 @@ input {
         width: 95%;
         padding: 6px;
         margin-top: 5px;
+        font-size: 16px;
     }
 
     #time_select {
@@ -425,6 +426,7 @@ input {
         margin-left: 20px;
         margin-top: 5px;
         padding: 5px;
+        font-size: 16px;
     }
 
     /* history.html */
@@ -596,6 +598,7 @@ input {
         width: 90%;
         padding: 5px;
         margin-top: 5px;
+        font-size: 14px;
     }
 
     #time_select {
@@ -604,6 +607,7 @@ input {
         margin-left: 20px;
         margin-top: 5px;
         padding: 5px;
+        font-size: 14px;
     }
 
     /* history.html */
@@ -796,6 +800,7 @@ input {
         width: 90%;
         padding: 4px;
         margin-top: 5px;
+        font-size: 11px;
     }
 
     #time_select {
@@ -804,6 +809,7 @@ input {
         margin-left: 20px;
         margin-top: 5px;
         padding: 4px;
+        font-size: 11px;
     }
 
     /* history.html */
@@ -1053,6 +1059,7 @@ input {
         width: 90%;
         padding: 3px;
         margin-top: 5px;
+        font-size: 10px;
     }
 
     #time_select {
@@ -1061,6 +1068,7 @@ input {
         margin-left: 20px;
         margin-top: 5px;
         padding: 3px;
+        font-size: 10px;
     }
 
     /* history.html */
