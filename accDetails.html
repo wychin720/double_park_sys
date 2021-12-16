@@ -145,20 +145,23 @@
                 const db = app.firestore();
                 var newEmail = document.getElementById("chgEmail").value
                 var user_id = localStorage.getItem("UID");
-
-                auth.currentUser.updateEmail(newEmail).then(() => {
+                var changedEmailFlag = false;
+                await auth.currentUser.updateEmail(newEmail).then(() => {
                     alert("Email Updated: " + newEmail);
                 }).catch((error) => {
                     alert(error);
+                    changedEmailFlag = true;
                 });
 
-                await db.collection("users").doc(user_id).update(
-                    {
-                        "email": newEmail
-                    });
-                document.getElementById("email").innerText = newEmail;
-                document.getElementById("cEmailBox").style.display = "none";
-                document.getElementById("email").style.display = "flex";
+                if (changedEmailFlag == false) {
+                    await db.collection("users").doc(user_id).update(
+                        {
+                            "email": newEmail
+                        });
+                    document.getElementById("email").innerText = newEmail;
+                    document.getElementById("cEmailBox").style.display = "none";
+                    document.getElementById("email").style.display = "flex";
+                }
                 //use the update email func to update the auth
             }
 
