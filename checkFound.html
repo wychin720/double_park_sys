@@ -37,6 +37,11 @@
             <span class="info" id="loc"></span>
         </p>
 
+        <p>
+            <label>I'll be right back in</label>
+            <span class=info id="duration"></span>
+        </p>
+
     </div>
     <!-- For prompting to see more by sign in -->
     <div id="forNoneUser" style="width: 80%; text-align: center;margin: auto;"></div>
@@ -79,6 +84,7 @@
         //document.getElementById("contactNum").innerText = sessionStorage.getItem("phone");
         //document.getElementById("name").innerText = sessionStorage.getItem("name");
         document.getElementById("loc").innerText = sessionStorage.getItem("loc");
+        document.getElementById("duration").innerText = sessionStorage.getItem("duration") + " mins";
         document.getElementById("time").innerText = sessionStorage.getItem("time");
         document.getElementById("make").innerText = sessionStorage.getItem("colour") + " " + sessionStorage.getItem("brand");
 
