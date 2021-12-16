@@ -37,7 +37,23 @@
     <script>
         // user click button to return back to home
         function returnToHome() {
-            window.location.href = "index.html"
+            if (localStorage.getItem("UID") != null) {
+
+                var gotEntry = false;
+                await db.collection("users").doc(localStorage.getItem("UID").toString()).get().then((doc) => {
+                    if (doc.exists) {
+                        console.log("user data")
+                        console.log(doc.data().latest_park_id);
+                        if (doc.data().latest_park_id != "") { //if theres a entry
+                            window.location.href = "mainCheckOut.html";
+                        }
+                        else {
+                            window.location.href = "mainPage.html";
+                        }
+
+                    }
+                })
+            }
         }
 
         function tryAgain() {
@@ -46,4 +62,5 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 </body>
+
 </html>
