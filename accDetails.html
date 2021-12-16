@@ -10,54 +10,66 @@
 <body>
     <!-- Header -->
     <div style="text-align: center;">
-        <div class="page-header">
-            <span class="header-icon">
+        <div class="page_header">
+            <span class="header_icon">
                 <ion-icon name="options-outline"></ion-icon>
             </span>
-            <span class="header-text">Account</span>
+            <span class="header_text">Account</span>
         </div>
 
         <!-- Display Information -->
         <div class="box">
             <p>
-                <label>Name</label>
+                <label id="label-margin">Name</label>
                 <span id="driver-name" class="info">Loading...</span>
             </p>
+
             <p>
-                <label>Contact Number
-                    <button onclick="showEditNum()">
-                        <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-                    </button>
+                <label id="label-margin">Contact Number
+                    <span>
+                        <button class="edit_details" id="style" onclick="showEditNum()">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </button>
+                    </span>
                 </label>
                 <span id="contact-number" class="info">Loading...</span>
-            <div id="cNumberBox" style="display:none">
-                <input type="text" id="chgNumber">
-                <button onclick="editContactNum()">Save</button>
-            </div>
+                
+                <div id="cNumberBox">
+                    <input type="text" id="chgNumber">
+                    <button onclick="editContactNum()">Save</button>
+                </div>
             </p>
+
             <p>
-                <label>Email
-                    <button onclick="showEditEmail()">
-                        <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-                    </button>
+                <label id="label-margin">Email
+                    <span>
+                        <button class="edit_details" id="style" onclick="showEditEmail()">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </button>
+                    </span>
                 </label>
                 <span id="email" class="info">Loading...</span>
-            <div id="cEmailBox" style="display:none">
-                <input type="text" id="chgEmail">
-                <button onclick="editEmail()">Save</button>
-            </div>
+
+                <div id="cEmailBox">
+                    <input type="text" id="chgEmail">
+                    <button onclick="editEmail()">Save</button>
+                </div>
             </p>
+
             <p>
-                <label>Vehicle Plate
-                    <button onclick="showEditPlate()">
-                        <ion-icon name="create-outline" style="font-size: 18px;"></ion-icon>
-                    </button>
+                <label id="label-margin">Vehicle Plate
+                    <span>
+                        <button class="edit_details" id="style" onclick="showEditPlate()">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </button>
+                    </span>
                 </label>
                 <span id="vehicle-plate" class="info">Loading...</span>
-            <div id="cPlateBox" style="display:none">
-                <input type="text" id="chgPlate">
-                <button onclick="editVehPlate()">Save</button>
-            </div>
+
+                <div id="cPlateBox">
+                    <input type="text" id="chgPlate">
+                    <button onclick="editVehPlate()">Save</button>
+                </div>
             </p>
         </div>
 
