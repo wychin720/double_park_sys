@@ -359,7 +359,7 @@ label {
     .form__group {
         position: relative;
         padding: 15px 0 0;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .form__field {
@@ -369,7 +369,7 @@ label {
         outline: 0;
         font-size: 1.3rem;
         color: black;
-        padding: 8px 0 4px;
+        padding: 10px 0 3px;
         background: transparent;
         transition: border-color 0.2s;
     }
@@ -379,7 +379,7 @@ label {
     }
 
     .form__field:placeholder-shown ~ .form__label {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         cursor: text;
         top: 20px;
     }
@@ -389,7 +389,7 @@ label {
         top: 0;
         display: block;
         transition: 0.2s;
-        font-size: 1.irem;
+        font-size: 1.1rem;
         font-weight: initial;
         color: #807f7f;
     }
@@ -527,7 +527,7 @@ label {
     /* SignIn + SignUp Form Input */
     .form__group {
         position: relative;
-        margin-top: -7px;
+        margin-top: 7px;
     }
     
     .form__field {
@@ -535,9 +535,9 @@ label {
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
-        font-size: 1.1rem;  
+        font-size: 1.2rem;  
         color: black;
-        padding: 35px 0 2px;
+        padding: 23px 0 2px;
         background: transparent;
     }
     
@@ -546,7 +546,7 @@ label {
     }
     
     .form__field:placeholder-shown ~ .form__label {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         cursor: text;
         top: 20px;
     }
@@ -556,7 +556,7 @@ label {
         top: 0;
         display: block;
         transition: 0.2s;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: initial;
         color: #807f7f;
     }
@@ -577,7 +577,7 @@ label {
 
     /* Driver Contact Input */
     #margin.driver_label {
-        margin-top: 25px;
+        margin-top: 17px;
     }
 
     #driver-select {
@@ -696,11 +696,10 @@ label {
         font-size: 20px;
     }  
 
-
     /* SignIn + SignUp Form Input */
     .form__group {
         position: relative;
-        margin-top: -10px;
+        margin-top: 5px;
     }
     
     .form__field {
@@ -708,9 +707,9 @@ label {
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
-        font-size: 1.1rem;  
+        font-size: 1.2rem;  
         color: black;
-        padding: 35px 0 2px;
+        padding: 20px 0 2px;
         background: transparent;
     }
     
@@ -719,7 +718,7 @@ label {
     }
     
     .form__field:placeholder-shown ~ .form__label {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         cursor: text;
         top: 20px;
     }
@@ -729,7 +728,7 @@ label {
         top: 0;
         display: block;
         transition: 0.2s;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: initial;
         color: #807f7f;
     }
@@ -739,7 +738,7 @@ label {
         top: 0;
         display: block;
         transition: 0.2s;
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 700;
     }
     
@@ -856,18 +855,6 @@ label {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    /* .footer {
-        clear: both;
-        position: absolute;
-        margin: auto;
-        font-size: 10px;
-        font-weight: bold;
-        bottom: 0px; 
-        width: 100%; 
-        height: 20px;
-    }   */
-    
-
     #plate.info,
     #make.info,
     #time.info,
@@ -919,7 +906,7 @@ label {
     /* input bar */
     .form__group {
         position: relative;
-        margin-top: -12px;
+        margin-top: -3px;
     }
     
     .form__field {
@@ -927,9 +914,9 @@ label {
         border: 0;
         border-bottom: 1px solid #807f7f;
         outline: 0;
-        font-size: 1rem;  
+        font-size: 1.1rem;  
         color: black;
-        padding: 30px 0 2px;
+        padding: 20px 0 2px;
         background: transparent;
         transition: border-color 0.2s;
     }
@@ -939,9 +926,9 @@ label {
     }
     
     .form__field:placeholder-shown ~ .form__label {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         cursor: text;
-        top: 20px;
+        top: 17px;
     }
     
     .form__label {
@@ -967,7 +954,7 @@ label {
         box-shadow: none;
     }
 
-    /* Driver Contact Input */
+    /* driver name input - signUp.html */
     #margin.driver_label {
         margin-top: 10px;
     }
