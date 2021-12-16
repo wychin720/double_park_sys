@@ -35,7 +35,7 @@ If you would like to "Sign Up":
 
 Lastly, each user that signs up will have a profile as follows:
 
-![image](https://user-images.githubusercontent.com/69201759/146146794-b5e63cfe-8131-47db-8843-fb67f529ade0.png)
+![image](https://user-images.githubusercontent.com/69201759/146324582-2c66e83e-2418-4d80-a691-025d1da75b89.png)
 
 That concludes the quick summary, do refer to the Round 2 video [here](https://youtu.be/7qYWFXDlBHQ) where we demo further the flow between each page! (This was the previous prototype but the essential flow is there. This sentence will be removed if we produce a separate demo video)
 
