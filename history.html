@@ -160,7 +160,7 @@
             toInject.appendChild(content_div);
         }
         // user click button to return back to home
-        function returnToHome() {
+        async function returnToHome() {
             const app = firebase.initializeApp(firebaseConfig);
             const db = app.firestore();
 
