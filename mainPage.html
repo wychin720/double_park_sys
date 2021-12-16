@@ -9,8 +9,7 @@
 
 <body>
     <div style="text-align: center; margin-top: 80px;">
-        <!-- TODO : centre the text -->
-        <a id="welcome-text" class="profile-text">Loading...</a><br>
+        <a id="welcome-text" class="profile_text">Loading...</a><br>
 
         <button type="button" class="submit_btn" style="background-color: #8d28c7;" onclick="toSearch()">
             <ion-icon name="search"></ion-icon>
@@ -23,11 +22,11 @@
     <!-- Check-In -->
     <!-- Header -->
     <div style="text-align: center; margin-top: -30px;">
-        <div class="page-header">
-            <span class="CI-header-icon">
+        <div class="page_header">
+            <span class="CI_header_icon">
                 <ion-icon name="location"></ion-icon>
             </span>
-            <span class="header-text">CHECK-IN</span>
+            <span class="header_text">CHECK-IN</span>
         </div>
     </div>
 
@@ -35,12 +34,12 @@
     <div class="box">
         <form>
             <p>
-                <label for="location_went">Location(s):</label>
+                <label id="label-margin" for="location_went">Location(s):</label>
                 <input type="text" id="location_went" name="location_went" placeholder="Insert Here" required>
             </p>
 
             <p>
-                <label for="time_est" style="padding-right: 30px; padding-top: 4px;">Estimated Time Taken:</label>
+                <label id="label-margin" for="time_est" style="padding-right: 30px; padding-top: 4px;">Estimated Time Taken:</label>
                 <select id="time_select" style="width: 100px;">
                     <option value="5">5 mins</option>
                     <option value="10">10 mins</option>
