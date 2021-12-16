@@ -19,7 +19,7 @@ The following will be a quick summary of key pages that we would like to highlig
 
 ![image](https://user-images.githubusercontent.com/69201759/146146110-43bd7bbe-6e00-40fa-9f60-8a23d828f26c.png)
 
-To try out "Searching a Vehicle", you will see the following to enter a vehicle plate. We have some pre-set number plates that you may try; ABC1234, .... (ADD ALL AVAILABLE NUMBER PLATES HERE). Additionally, you may go to the "Sign Up" page and key in your own details and number plate, and try searching your detials after "Signing in" and "Checking in" your vehicle.
+To try out "Searching a Vehicle", you will see the following to enter a vehicle plate. We have some pre-set number plates that you may try; DEF1234. Additionally, you may go to the "Sign Up" page and key in your own details and number plate, and try searching your detials after "Signing in" and "Checking in" your vehicle.
 
 ![image](https://user-images.githubusercontent.com/69201759/146146235-be387948-f371-42f0-a420-987db9a0899e.png)
 
