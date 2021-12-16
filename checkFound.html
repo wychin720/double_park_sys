@@ -135,22 +135,24 @@
                 window.location.href = "index.html";
             }
             else {
-                const app = firebase.initializeApp(firebaseConfig);
-                const db = app.firestore();
-                const docRef = await db.collection("users").doc(uid);
-                docRef.get().then((doc) => {
-                    if (doc.exists && doc.data().latest_park_id != "" && doc.data().latest_park_id != undefined) {
-                        console.log("exist unchecked out vehicle");
-                        // there is unchecked-out vehicle for this user
-                        window.location.href = "mainCheckOut.html";
-                    }
-                    else {
-                        console.log("document lost.");
-                    }
-                    // there is no unchecked-out vehicle
-                    console.log("able to check in.")
-                    window.location.href = "mainPage.html";
-                })
+                if (localStorage.getItem("UID") != null) {
+                    const app = firebase.initializeApp(firebaseConfig);
+                    const db = app.firestore();
+                    var gotEntry = false;
+                    await db.collection("users").doc(localStorage.getItem("UID").toString()).get().then((doc) => {
+                        if (doc.exists) {
+                            console.log("user data")
+                            console.log(doc.data().latest_park_id);
+                            if (doc.data().latest_park_id != "") { //if theres a entry
+                                window.location.href = "mainCheckOut.html";
+                            }
+                            else {
+                                window.location.href = "mainPage.html";
+                            }
+
+                        }
+                    })
+                }
             }
         }
 
