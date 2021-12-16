@@ -1,5 +1,5 @@
-/* General */
 
+/* ================================= HTML TAG ================================= */
 body {
     background: white;
     color: black;
@@ -21,20 +21,14 @@ input {
     padding: 5px;
 }
 
-.big-header-icon {
-    font-size: 40px;
-    margin-left: -40px;
-}
-
-.big-header-text {
-    font-size: 24px;
+label { 
+    display: flex; 
     font-weight: bold;
-    margin-top: 8px;
-    margin-left: 10px;
-    text-align: right; 
-    margin-right: -50px;
+    margin-left: 20px;
 }
 
+/* ================================= BUTTONS ================================= */
+/* index.html + profile.html */
 .buttons {
     background-color: #8561e6;
     color: white;
@@ -49,104 +43,16 @@ input {
     transition-duration: 1s;
 }
 
-.button-icon {
+.button_icon {
     margin: 0 4% 0 6%;
     color: #fff;
     font-size: 20px;
 }
 
-.button-text {
+.button_text {
     font-size: 14px;
     margin-top: 2px;
     margin-left: 42px;
-}
-
-.box {
-    background-color: #f0f0f0;
-    width: 80%;
-    padding: 13px 30px 13px 0;
-    margin: auto;
-    overflow: auto;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-#driver_name {
-    display: inline-block;
-    width: 71%;
-    margin-left: -5px;
-    padding: 3px
-}
-
-.footer {
-    clear: both;
-    position: absolute;
-    margin: auto;
-    font-size: 10px;
-    font-weight: bold;
-    bottom: 0px; 
-    width: 100%; 
-    height: 40px;
-}   
-
-.header-icon {
-    font-size: 45px;
-    margin-left: 23px;
-}
-
-.header-text {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 8px;
-    margin-left: 14px;
-}
-
-.input-bar {
-    width: 70%;
-    display: block;
-    margin: 20px auto 0 auto;
-    padding: 8px;
-}
-
-#long-btn-text {
-    margin-left: 10px;
-}
-
-#long-header-text {
-    margin-left: -10px;
-    margin-top: -5px;
-}
-
-.page-header,
-.invisible-box {
-    font-weight: 500;
-    border: none;
-    width: 220px;
-    display: inline-flex;
-    margin: 100px auto 10px auto;
-}
-
-#pencil {
-    font-size: 50px;
-}
-
-.profile-icon {
-    font-size: 50px;
-    margin-left: 30px;
-}
-
-.profile-text {
-    font-size: 18px;
-    margin-top: 15px;
-    margin-left: 14px;
-}
-
-.sys-name {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 10%;
 }
 
 .submit_btn {
@@ -154,7 +60,6 @@ input {
     color: white;
     margin: 25px auto 0 auto;
     font-size: 22px;
-    /* padding: 5px 15px; */
     padding: 5px 20px;
     border: none;
     border-radius: 40px;
@@ -171,39 +76,13 @@ input {
     background: #3f1e99;
 }
 
-
-.CI-header-icon {
-    color:#d00b0b; 
-    font-size: 40px;
-    margin-left: 15px;
-    margin-right: -5px;
+/* profile.html */
+#long-btn-text {
+    margin-left: 10px;
 }
 
-.CI-confirm-text {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 8px;
-    margin-left: -30px;
-    padding-right: 7px;
-    text-align: left;
-}
 
-.CI-confirm-icon {
-    color:#69df59; 
-    font-size: 25px; 
-    --ionicon-stroke-width: 40px;
-    padding-top: 5px;
-    margin-right: -20px;
-}
-
-.forgot_password {
-    border: none;
-    background: transparent;
-    color: blue;
-    text-decoration: underline;
-}
-
-/* dropdown bar - history.html */
+/* ================================= dropdown bar - history.html ================================= */
 .collapsible {
     /* background-color: rgb(202, 202, 202); */
     background-color: #5144c2;
@@ -247,66 +126,232 @@ input {
     background-color: #faeefd;
 }
 
+/* ============================= Driver Contact Input - signUp.html ==============================*/
+.driver_label {
+	font-size: 1.1rem;
+        font-weight: initial;
+        color: #807f7f;
+}
+
+#driver-select {
+	display: inline-block;
+    width: 55px;
+    margin-left: 20px;
+    padding: 3px;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #807f7f;
+}
+
+#driver_name {
+    display: inline-block;
+    margin-left: -2px;
+    /* padding: auto; */
+    padding-bottom: 3px;
+    color: black;
+    outline: 0;
+    background: transparent;
+    border: 0;
+}
+
+/* ================================= GENERAL ================================= */
+.footer {
+    clear: both;
+    position: absolute;
+    margin: auto;
+    font-size: 10px;
+    font-weight: bold;
+    bottom: 0px; 
+    width: 100%; 
+    height: 40px;
+} 
+
+.page_header,
+.invisible_box {
+    font-weight: 500;
+    border: none;
+    width: 220px;
+    display: inline-flex;
+    margin: 100px auto 10px auto;
+}
+
+/* iphone 5/SE diff settings */
+.box {
+    background-color: #f0f0f0;
+    width: 80%;
+    padding: 13px 30px 13px 0;
+    margin: auto;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* checkVehicle.html */
+.input_bar {
+    width: 70%;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 8px;
+}
+
+/* checkVehicle.html */
+/* iphone 5/SE diff settings */
+.big_header_icon {
+    font-size: 40px;
+    margin-left: -40px;
+}
+
+.big_header_text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: 10px;
+    text-align: right; 
+    margin-right: -50px;
+}
+
+/* history.html + accDetails.html */
+.header_icon {
+    font-size: 45px;
+    margin-left: 23px;
+}
+
+/* history.html + accDetails.html + mainCheckOut.html + mainPage.html*/
+.header_text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: 14px;
+}
+
+.info {
+	display: flex;
+    color: #181b6b;
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    padding: 5px 0 7px 20px;
+    text-align: left;
+}
+
+.logo_picture {
+	display: block;
+}
+
+.only_icon {
+	text-align: center;
+    margin-bottom: -10px;
+}
+
+/* forgotPassword.html */
+.reset_email {
+    color: #6b6a6a; 
+}
+
+/* signUp.html */
+#pencil {
+    font-size: 50px;
+}
+
+/* profile.html */
+.profile_icon {
+    font-size: 50px;
+    margin-left: 30px;
+}
+
+.profile_text {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 14px;
+}
+
+/* index.html */
+.sys_name {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10%;
+}
+
+/* mainPage.html */
+.CI_header_icon {
+    color:#d00b0b; 
+    font-size: 40px;
+    margin-left: 15px;
+    margin-right: -5px;
+}
+
+/* signIn.html */
+.forgot_password {
+    border: none;
+    background: transparent;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* accDetails.html */
+.edit_details { 
+    border: none; 
+    background: transparent;
+    padding-left: 5px;
+}
+
+#cNumberBox,
+#cEmailBox,
+#cPlateBox {
+    display: none;
+    margin-top: -10px;
+}
+
+
 /* ******************************************************************************************************************************************************** */
 
 /* ipX + pixel 2 XL */
 @media only screen and (max-width: 480px) and (min-height:800px) { 
 
-    label { 
-        display: flex; 
-        font-weight: bold;
+    #label-margin {
         font-size: 22px;
-        margin-left: 20px;
     }
     
-    .button-text {
+    .button_text {
         font-size: 18px;
         margin-top: 2px;
         margin-left: 35px;
     }
-    
-    .info {
-        display: flex;
-        color: #181b6b;
-        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-        font-weight: 500;
-        padding: 5px 0 7px 20px;
-        text-align: left;
+
+    #plate.info,
+    #make.info,
+    #time.info,
+    #loc.info,
+    #duration.info,
+    #driver-name.info,
+    #contact-number.info,
+    #email.info,
+    #vehicle-plate.info {
         font-size: 18px;
-    }
+    }       
 
-    .input-bar {
-        width: 68%;
-        display: block;
-        margin: 20px auto 0 auto;
-        padding: 6px;
-    }
-
-    .logo-picture {
-        display: block;
+    #logo-size.logo_picture {
         margin: 50% auto 0 auto;
         max-width: 75px;
     }
 
-    #changePwd.logo-picture {
+    #changePwd.logo_picture {
         margin: 50% auto 5% auto;
         max-width: 85px;
     }
     
-    .margin-top-adj {
+    .margin_top_adj {
         margin-top: 100px;
     }
-    
-    .only-icon {
-        text-align: center;
+
+    #icon-style.only_icon {
         margin-top: 27%;
-        margin-bottom: -10px;
         font-size: 60px;
     }
     
     #long-btn-text {
         font-size: 17px;
-        margin-left: 10px;
     }
 
     
@@ -371,26 +416,19 @@ input {
         color: #807f7f;
     }
 
+    /* Driver Contact Input */
+    #margin.driver_label {
+        margin-top: 15px;
+    }
+
     #driver-select {
-        display: inline-block;
-        width: 55px;
-        margin-left: 20px;
-        padding: 3px;
         font-size: 1.3rem;
-        background: transparent;
-        border: 0;
         border-bottom: 2px solid #807f7f;
     }
 
     #driver_name {
         width: 72%;
-        margin-left: -2px;
-        padding: auto;
-        font-size: 1.3rem;  
-        color: black;
-        outline: 0;
-        background: transparent;
-        border: 0;
+        font-size: 1.3rem;
         border-bottom: 2px solid #807f7f;
     }
 
@@ -400,18 +438,9 @@ input {
         margin: 75px auto 0 auto;
     }
 
-    #link-size.forgot_password {
-        font-size: 16px;
-        margin: -15px -7px 0 auto;
-    }
-
     /* forgotPassword.html */
-    .reset-email {
-        color: #6b6a6a; 
+    #label-size.reset_email {
         margin-bottom: 3px;
-    }
-
-    #label-size.reset-email {
         margin-top: -15px;
         font-size: 1.3rem;
     }
@@ -447,49 +476,51 @@ input {
         max-height:30rem; 
     }
 
+    /* edit details - accDetails.html */
+    #style.edit_details {
+        font-size: 20px;
+        padding-top: 3px;
+    }
+
 }
 
 
 /* pixel 2 + ip 6/7/8 (plus) */
 @media only screen and (min-width: 375px) and (max-height:800px) { 
 
-    label { 
-        display: flex; 
-        font-weight: bold;
+    #label-margin {
         font-size: 20px;
-        margin-left: 20px;
         margin-top: 10px;
     }
 
-    .info {
-        display: flex;
-        color: #181b6b;
-        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-        font-weight: 500;
-        padding: 5px 0 7px 20px;
-        text-align: left;
+    #plate.info,
+    #make.info,
+    #time.info,
+    #loc.info,
+    #duration.info,
+    #driver-name.info,
+    #contact-number.info,
+    #email.info,
+    #vehicle-plate.info {
         font-size: 16px;
     }
 
-    .logo-picture {
-        display: block;
+    #logo-size.logo_picture {
         margin: 130px auto 0 auto;
         max-width: 60px;
     }
 
-    #changePwd.logo-picture {
+    #changePwd.logo_picture {
         margin: 50% auto 5% auto;
         max-width: 75px;
     }
 
-    .margin-top-adj {
+    .margin_top_adj {
         margin-top: -10px;
     }
 
-    .only-icon {
-        text-align: center;
+    #icon-style.only_icon {
         margin-top: 30px;
-        margin-bottom: -10px;
         font-size: 60px;
     }
 
@@ -545,33 +576,18 @@ input {
     }
 
     /* Driver Contact Input */
-    #driver-label {
+    #margin.driver_label {
         margin-top: 25px;
-        font-size: 1.1rem;
-        font-weight: initial;
-        color: #807f7f;
     }
 
     #driver-select {
-        display: inline-block;
-        width: 55px;
-        margin-left: 20px;
-        padding: 3px;
-        font-size: 1rem;
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid #807f7f;
+        font-size: 1.1rem;
+        border-bottom: 1px solid #807f7f;	
     }
 
     #driver_name {
         width: 71%;
-        margin-left: -2px;
-        padding: auto;
-        font-size: 1rem;  
-        color: black;
-        outline: 0;
-        background: transparent;
-        border: 0;
+        font-size: 1.1rem;
         border-bottom: 1px solid #807f7f;
     }
 
@@ -581,18 +597,9 @@ input {
         margin: 65px auto 0 auto;
     }
 
-    #link-size.forgot_password {
-        font-size: 14px;
-        margin: -14px 5px 0 auto;
-    }
-
     /* forgotPassword.html */
-    .reset-email {
-        color: #6b6a6a; 
+    #label-size.reset_email {
         margin-bottom: -25px;
-    }
-
-    #label-size.reset-email {
         margin-top: 15px;
         font-size: 1.3rem;
     }
@@ -628,54 +635,56 @@ input {
         max-height:25rem; 
     }
 
+    /* edit details - accDetails.html */
+    #style.edit_details {
+        font-size: 20px;
+        padding-top: 1px;
+    }
+
 }
 
 
 /* moto G4 + Galaxy S5 */
 @media only screen and (max-width: 375px) and (max-height:640px) { 
     
-    label { 
-        display: flex; 
-        font-weight: bold;
-        font-size: 14px;
-        margin-left: 20px;
+    #label-margin {
+        font-size: 15px;
         margin-top: 10px;
     }
 
-    .info {
-        display: flex;
-        color: #181b6b;
-        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-        font-weight: 500;
-        padding: 5px 0 7px 20px;
-        text-align: left;
-        font-size: 12px;
+    #plate.info,
+    #make.info,
+    #time.info,
+    #loc.info,
+    #duration.info,
+    #driver-name.info,
+    #contact-number.info,
+    #email.info,
+    #vehicle-plate.info {
+        font-size: 13px;
     }
 
-    .logo-picture {
-        display: block;
+    #logo-size.logo_picture {
         margin: 85px auto 0 auto;
         max-width: 55px;
     }
 
-    #changePwd.logo-picture {
+    #changePwd.logo_picture {
         margin: 50% auto 5% auto;
         max-width: 70px;
     }
 
-    .margin-top-adj {
+    .margin_top_adj {
         margin-top: 50px;
     }
-    
-    .only-icon {
-        text-align: center;
+
+    #icon-style.only_icon {
         margin-top: 10%;
-        margin-bottom: -10px;
         font-size: 53px;
     }
 
-    .page-header,
-    .invisible-box {
+    .page_header,
+    .invisible_box {
         font-weight: 500;
         border: none;
         width: 220px;
@@ -684,14 +693,7 @@ input {
     }
 
     .submit_btn {
-        background-color: #8561e6;
-        color: white;
-        margin: 25px auto 0 auto;
         font-size: 20px;
-        padding: 5px 20px;
-        border: none;
-        border-radius: 40px;
-        transition-duration: 1s;
     }  
 
 
@@ -747,33 +749,19 @@ input {
     }
 
     /* Driver Contact Input */
-    #driver-label {
+    #margin.driver_label {
         margin-top: 16px;
-        font-size: 1.1rem;
-        font-weight: initial;
-        color: #807f7f;
     }
 
     #driver-select {
-        display: inline-block;
-        width: 55px;
-        margin-left: 20px;
-        padding: 3px;
         font-size: 1rem;
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid #807f7f;
+        border-bottom: 1px solid #807f7f;	
     }
 
     #driver_name {
-        width: 68%;
-        margin-left: -2px;
-        padding: auto;
-        font-size: 1rem;  
-        color: black;
-        outline: 0;
-        background: transparent;
-        border: 0;
+        width: 71%;
+        font-size: 1rem;
+        padding-bottom: 3.5px;
         border-bottom: 1px solid #807f7f;
     }
 
@@ -783,18 +771,9 @@ input {
         margin: 65px auto 0 auto;
     }
 
-    #link-size.forgot_password {
-        font-size: 14px;
-        margin: -13px -15px 0 auto;
-    }
-
     /* forgotPassword.html */
-    .reset-email {
-        color: #6b6a6a; 
+    #label-size.reset_email {
         margin-bottom: -30px;
-    }
-
-    #label-size.reset-email {
         margin-top: 20px;
         font-size: 1.2rem;
     }
@@ -830,16 +809,19 @@ input {
         max-height:22rem; 
     }
 
+    /* edit details - accDetails.html */
+    #style.edit_details {
+        font-size: 15px;
+        padding-top: -6px;
+    }
+
 }
 
 /* ip 5/SE */
 @media only screen and (max-width: 375px) and (max-height:568px) { 
 
-    label { 
-        display: flex; 
-        font-weight: bold;
+    #label-margin {
         font-size: 14px;
-        margin-left: 20px;
         margin-top: 10px;
     }
     
@@ -850,12 +832,13 @@ input {
         padding: 2px;
     }
 
-    .big-header-icon {
+    /* checkVehicle.html */
+    .big_header_icon {
         font-size: 30px;
         margin-left: -20px;
     }
 
-    .big-header-text {
+    .big_header_text {
         font-size: 22px;
         font-weight: bold;
         margin-top: 4px;
@@ -873,7 +856,7 @@ input {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    .footer {
+    /* .footer {
         clear: both;
         position: absolute;
         margin: auto;
@@ -882,42 +865,42 @@ input {
         bottom: 0px; 
         width: 100%; 
         height: 20px;
-    }  
+    }   */
+    
 
-    .info {
-        display: flex;
-        color: #181b6b;
-        font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-        font-weight: 500;
-        padding: 5px 0 7px 20px;
-        text-align: left;
+    #plate.info,
+    #make.info,
+    #time.info,
+    #loc.info,
+    #duration.info,
+    #driver-name.info,
+    #contact-number.info,
+    #email.info,
+    #vehicle-plate.info {
         font-size: 12px;
     }
 
-    .logo-picture {
-        display: block;
+    #logo-size.logo_picture {
         margin: 85px auto 0 auto;
         max-width: 55px;
     }
 
-    #changePwd.logo-picture {
+    #changePwd.logo_picture {
         margin: 50% auto 5% auto;
         max-width: 66px;
     }
 
-    .margin-top-adj {
+    .margin_top_adj {
         margin-top: 25px;
     }
     
-    .only-icon {
-        text-align: center;
+    #icon-style.only_icon {
         margin-top: 10%;
-        margin-bottom: -10px;
         font-size: 45px;
     }
     
-    .page-header,
-    .invisible-box {
+    .page_header,
+    .invisible_box {
         font-weight: 500;
         border: none;
         width: 220px;
@@ -926,28 +909,7 @@ input {
     }
     
     .submit_btn {
-        background-color: #8561e6;
-        color: white;
-        margin: 25px auto 0 auto;
         font-size: 18px;
-        padding: 5px 20px;
-        border: none;
-        border-radius: 40px;
-        transition-duration: 1s;
-    }
-
-    /* #time-select {
-        display: inline-block;
-        width: 50px;
-        margin-left: 20px;
-        padding: 2px;
-    } */
-    
-    #driver_name {
-        display: inline-block;
-        width: 68%;
-        margin-left: -3px;
-        padding: 2px
     }
 
     #pencil {
@@ -1006,33 +968,18 @@ input {
     }
 
     /* Driver Contact Input */
-    #driver-label {
+    #margin.driver_label {
         margin-top: 10px;
-        font-size: 1.1rem;
-        font-weight: initial;
-        color: #807f7f;
     }
 
     #driver-select {
-        display: inline-block;
-        width: 54px;
-        margin-left: 20px;
-        padding: 3px;
         font-size: 1rem;
-        background: transparent;
-        border: 0;
-        border-bottom: 1px solid #807f7f;
+        border-bottom: 1px solid #807f7f;	
     }
 
     #driver_name {
-        width: 67.9%;
-        margin-left: -2px;
-        padding: auto;
-        font-size: 1rem;  
-        color: black;
-        outline: 0;
-        background: transparent;
-        border: 0;
+        width: 67.5%;
+        font-size: 1rem;
         border-bottom: 1px solid #807f7f;
     }
 
@@ -1042,18 +989,9 @@ input {
         margin: 65px auto 0 auto;
     }
 
-    #link-size.forgot_password {
-        font-size: 13px;
-        margin: -14px -15px 0 auto;
-    }
-
     /* forgotPassword.html */
-    .reset-email {
-        color: #6b6a6a; 
+    #label-size.reset_email {
         margin-bottom: -25px;
-    }
-
-    #label-size.reset-email {
         margin-top: 15px;
         font-size: 1.1rem;
     }
@@ -1087,5 +1025,11 @@ input {
 
     .table_max {
         max-height:22rem; 
+    }
+
+    /* edit details - accDetails.html */
+    #style.edit_details {
+        font-size: 13px;
+        padding-top: 2px;
     }
 }
