@@ -163,7 +163,7 @@ input {
 
 .submit_btn:hover,
 .buttons:hover {
-    background: #5327ca;
+    background: #503794;
 }
 
 .submit_btn:active,
@@ -205,8 +205,10 @@ input {
 
 /* dropdown bar - history.html */
 .collapsible {
-    background-color: rgb(202, 202, 202);
-    color: black;
+    /* background-color: rgb(202, 202, 202); */
+    background-color: #5144c2;
+    /* color: black; */
+    color: #d2d2d6;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -218,21 +220,22 @@ input {
 
 .active,
 .collapsible:hover {
-    background-color: rgb(160, 159, 159);
+    /* background-color: rgb(160, 159, 159); */
+    background-color: #403791;
 }
 
 .collapsible:after {
     content: '\02C5';
-    /* Unicode character for up arrow */
+    /* Unicode character for down arrow */
     color: white;
     font-weight: bold;
     float: right;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .active:after {
     content: "\02C4";
-    /* Unicode character for down arrow */
+    /* Unicode character for up arrow */
 }
 
 .content {
@@ -240,7 +243,8 @@ input {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
+    background-color: #d2d0e4;
 }
 
 /* ******************************************************************************************************************************************************** */
@@ -1059,7 +1063,7 @@ input {
         width: 90%;
         padding: 3px;
         margin-top: 5px;
-        font-size: 10px;
+        font-size: 10.5px;
     }
 
     #time_select {
@@ -1068,7 +1072,7 @@ input {
         margin-left: 20px;
         margin-top: 5px;
         padding: 3px;
-        font-size: 10px;
+        font-size: 10.5px;
     }
 
     /* history.html */
