@@ -98,7 +98,7 @@
         async function load() {
             const uid = localStorage.getItem("UID");
             //const uid = "Lv4nVURG61gGvpK56dnAyXMDfUn1"; // to see no history found
-           // const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
+            // const uid = "ZJzdDnBfNFgIgMh4QoSHA4m1txJ2"; // to see history entries 
             const app = firebase.initializeApp(firebaseConfig);
             const db = app.firestore();
             const entries = await db.collection("parking-entries").orderBy("timestamp", "asc").get();
@@ -123,7 +123,7 @@
                     injectCollapsible(data[i]);
                 }
             }
-            else{
+            else {
                 const toInject = document.getElementById("his_table");
                 toInject.innerHTML = "<p><a class='info'>No history found.</a></p>";
             }
@@ -161,7 +161,26 @@
         }
         // user click button to return back to home
         function returnToHome() {
-            window.location.href = "mainPage.html"
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = app.firestore();
+
+            if (localStorage.getItem("UID") != null) {
+
+                var gotEntry = false;
+                await db.collection("users").doc(localStorage.getItem("UID").toString()).get().then((doc) => {
+                    if (doc.exists) {
+                        console.log("user data")
+                        console.log(doc.data().latest_park_id);
+                        if (doc.data().latest_park_id != "") { //if theres a entry
+                            window.location.href = "mainCheckOut.html";
+                        }
+                        else {
+                            window.location.href = "mainPage.html";
+                        }
+
+                    }
+                })
+            }
         }
 
         function toSearch() {
