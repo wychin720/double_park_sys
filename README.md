@@ -15,7 +15,7 @@ This web application is created using HTML, CSS, JavaScript and several other Ja
 Compared to the prototype in Round 2, this web application is our final complete product that we are proud to present!
 
 ## How To Use
-The following will be a quick summary of key pages that we would like to highlight. First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link and you will be greeted with the following page:
+The following will be a quick summary of key pages that we would like to highlight. First click this [Double Parking Notification App](https://wychin229.github.io/double_park_sys/) link. If you are on browser, please Developer Tools and view on Mobile mode. Alternatively, you may view this link on your mobile phone. You will first be greeted with the following page:
 
 ![image](https://user-images.githubusercontent.com/69201759/146146110-43bd7bbe-6e00-40fa-9f60-8a23d828f26c.png)
 
